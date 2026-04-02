@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://YOUR-DOMAIN.TLD/sitemap.xml
+
+# Replace YOUR-DOMAIN.TLD with the production domain before launch.

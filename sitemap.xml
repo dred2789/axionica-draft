@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- Replace YOUR-DOMAIN.TLD with the production domain before launch. -->
+  <url>
+    <loc>https://YOUR-DOMAIN.TLD/ru/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://YOUR-DOMAIN.TLD/ru/" />
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.TLD/en/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://YOUR-DOMAIN.TLD/ru/" />
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.TLD/ru/accelerator.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/accelerator.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/accelerator.html" />
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.TLD/en/accelerator.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/accelerator.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/accelerator.html" />
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.TLD/ru/capital.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/capital.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/capital.html" />
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.TLD/en/capital.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/capital.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/capital.html" />
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.TLD/ru/cases.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/cases.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/cases.html" />
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.TLD/en/cases.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/cases.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/cases.html" />
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.TLD/ru/consulting.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/consulting.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/consulting.html" />
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.TLD/en/consulting.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/consulting.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/consulting.html" />
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.TLD/ru/contacts.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/contacts.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/contacts.html" />
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.TLD/en/contacts.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/contacts.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/contacts.html" />
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.TLD/ru/cookies.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/cookies.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/cookies.html" />
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.TLD/en/cookies.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/cookies.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/cookies.html" />
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.TLD/ru/directions.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/directions.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/directions.html" />
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.TLD/en/directions.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/directions.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/directions.html" />
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.TLD/ru/discovery.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/discovery.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/discovery.html" />
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.TLD/en/discovery.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/discovery.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/discovery.html" />
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.TLD/ru/insights.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/insights.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/insights.html" />
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.TLD/en/insights.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/insights.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/insights.html" />
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.TLD/ru/investors.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/investors.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/investors.html" />
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.TLD/en/investors.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/investors.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/investors.html" />
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.TLD/ru/personal-data-consent.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/personal-data-consent.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/personal-data-consent.html" />
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.TLD/en/personal-data-consent.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/personal-data-consent.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/personal-data-consent.html" />
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.TLD/ru/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/privacy.html" />
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.TLD/en/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/privacy.html" />
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.TLD/ru/product-studio.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/product-studio.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/product-studio.html" />
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.TLD/en/product-studio.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/product-studio.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/product-studio.html" />
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.TLD/ru/services.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/services.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/services.html" />
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.TLD/en/services.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/services.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/services.html" />
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.TLD/ru/startup-packaging.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/startup-packaging.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/startup-packaging.html" />
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.TLD/en/startup-packaging.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/startup-packaging.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/startup-packaging.html" />
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.TLD/ru/startup-tracking.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/startup-tracking.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/startup-tracking.html" />
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.TLD/en/startup-tracking.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/startup-tracking.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/startup-tracking.html" />
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.TLD/ru/studio.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/studio.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/studio.html" />
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.TLD/en/studio.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/studio.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/studio.html" />
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.TLD/ru/team.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/team.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/team.html" />
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.TLD/en/team.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/team.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/team.html" />
+  </url>
+</urlset>

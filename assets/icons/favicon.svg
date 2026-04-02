@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title>Axionica</title>
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#17345f" />
+      <stop offset="100%" stop-color="#2d5b9f" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="18" fill="url(#g)" />
+  <path d="M18 45 31.5 18h3.6L48 45h-5.7l-2.9-6.4H26.1L23 45Zm10.4-11h8.6l-4.2-9.8Z" fill="#fff" />
+</svg>
