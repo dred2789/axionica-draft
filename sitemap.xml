@@ -24,6 +24,26 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/accelerator.html" />
   </url>
   <url>
+    <loc>https://YOUR-DOMAIN.TLD/ru/ai-automation.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/ai-automation.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/ai-automation.html" />
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.TLD/en/ai-automation.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/ai-automation.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/ai-automation.html" />
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.TLD/ru/ai-training.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/ai-training.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/ai-training.html" />
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN.TLD/en/ai-training.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/ai-training.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/ai-training.html" />
+  </url>
+  <url>
     <loc>https://YOUR-DOMAIN.TLD/ru/capital.html</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/capital.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/capital.html" />
@@ -104,14 +124,14 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/insights.html" />
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN.TLD/ru/investors.html</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/investors.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/investors.html" />
+    <loc>https://YOUR-DOMAIN.TLD/ru/it-consulting.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/it-consulting.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/it-consulting.html" />
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN.TLD/en/investors.html</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/investors.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/investors.html" />
+    <loc>https://YOUR-DOMAIN.TLD/en/it-consulting.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/it-consulting.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/it-consulting.html" />
   </url>
   <url>
     <loc>https://YOUR-DOMAIN.TLD/ru/personal-data-consent.html</loc>
