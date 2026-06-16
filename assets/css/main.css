@@ -1043,31 +1043,61 @@ p {
   align-content: start;
 }
 
-.direction-hero-visual {
+.direction-hero-visual,
+.service-hero-visual {
   min-height: 310px;
   border: 0;
-  border-radius: 0;
+  border-radius: var(--radius-lg);
   background-color: transparent;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
-  overflow: visible;
+  background-size: cover;
+  aspect-ratio: 1200 / 896;
+  overflow: hidden;
 }
 
 .direction-hero-visual--studio {
-  background-image: url("../images/direction-studio.svg?v=2");
+  background-image: url("../images/axionica_studio_img.jpg");
 }
 
 .direction-hero-visual--consulting {
-  background-image: url("../images/direction-consulting.svg?v=2");
+  background-image: url("../images/axionica_consulting_img.jpg");
 }
 
 .direction-hero-visual--accelerator {
-  background-image: url("../images/direction-accelerator.svg?v=2");
+  background-image: url("../images/axionica_acceleration_img.jpg");
 }
 
 .direction-hero-visual--capital {
-  background-image: url("../images/direction-capital.svg?v=2");
+  background-image: url("../images/axionica_capital_img.jpg");
+}
+
+.service-hero-visual--discovery {
+  background-image: url("../images/service_discovery_img.jpg");
+}
+
+.service-hero-visual--development {
+  background-image: url("../images/service_development_img.jpg");
+}
+
+.service-hero-visual--consulting {
+  background-image: url("../images/service_consulting_img.jpg");
+}
+
+.service-hero-visual--ai-automation {
+  background-image: url("../images/service_aiautomation_img.jpg");
+}
+
+.service-hero-visual--ai-education {
+  background-image: url("../images/service_aieducation_img.jpg");
+}
+
+.service-hero-visual--tracking {
+  background-image: url("../images/service_tracking_img.jpg");
+}
+
+.service-hero-visual--investpack {
+  background-image: url("../images/service_investpack_img.jpg");
 }
 
 .breadcrumbs {
@@ -1374,7 +1404,8 @@ p {
     padding-bottom: 32px;
   }
 
-  .direction-hero-visual {
+  .direction-hero-visual,
+  .service-hero-visual {
     min-height: 240px;
   }
 
@@ -1432,7 +1463,8 @@ p {
     padding: 56px 0 24px;
   }
 
-  .direction-hero-visual {
+  .direction-hero-visual,
+  .service-hero-visual {
     min-height: 190px;
   }
 
