@@ -2,6 +2,37 @@ const navToggle = document.querySelector("[data-nav-toggle]");
 const navMenu = document.querySelector("[data-nav]");
 const navDropdowns = document.querySelectorAll("[data-nav-dropdown]");
 
+if (navMenu) {
+  const currentPath = window.location.pathname;
+  const currentFile = currentPath.endsWith("/") ? "index.html" : currentPath.split("/").pop();
+  const navLinks = navMenu.querySelectorAll(".nav-links a");
+
+  navLinks.forEach((link) => {
+    const linkFile = new URL(link.getAttribute("href"), window.location.href).pathname.split("/").pop() || "index.html";
+    const isCurrent = linkFile === currentFile;
+
+    link.classList.toggle("is-active", isCurrent);
+
+    if (isCurrent) {
+      link.setAttribute("aria-current", "page");
+
+      const parentDropdown = link.closest("[data-nav-dropdown]");
+
+      if (parentDropdown) {
+        const parentToggle = parentDropdown.querySelector(".nav-dropdown-toggle");
+
+        parentDropdown.classList.add("is-active");
+
+        if (parentToggle) {
+          parentToggle.setAttribute("data-active", "true");
+        }
+      }
+    } else {
+      link.removeAttribute("aria-current");
+    }
+  });
+}
+
 if (navToggle && navMenu) {
   const closeDropdowns = () => {
     navDropdowns.forEach((dropdown) => {
