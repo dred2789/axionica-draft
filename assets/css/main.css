@@ -119,7 +119,8 @@ button {
 .nav-links a:focus-visible,
 .lang-switcher a:focus-visible,
 .nav-dropdown-toggle:focus-visible {
-  outline: 0;
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
 }
 
 .nav-links a:hover,
@@ -205,7 +206,7 @@ button {
 
 .nav-links > a[aria-current="page"],
 .nav-dropdown.is-active > .nav-dropdown-toggle {
-  color: var(--color-accent-strong) !important;
+  color: var(--color-accent-strong);
 }
 
 .nav-toggle {
@@ -338,7 +339,6 @@ p {
   color: #fff;
 }
 
-.hero-panel,
 .card,
 .feature-plate,
 .cta-panel,
@@ -349,95 +349,11 @@ p {
   box-shadow: none;
 }
 
-.hero-panel {
-  min-height: 100%;
-  padding: 0;
-  border: 0;
-  background: transparent;
-  display: grid;
-  align-content: space-between;
-  gap: 24px;
-  overflow: visible;
-  position: relative;
-}
-
-.hero-panel::before {
-  content: "";
-  display: block;
+.hero-visual {
   min-height: 420px;
   aspect-ratio: 1200 / 896;
   border-radius: var(--radius-lg);
-  border: 0;
   background: url("../images/axionica_main_img.jpg") center / cover no-repeat;
-  order: -1;
-}
-
-.hero-panel-note {
-  display: grid;
-  gap: 14px;
-}
-
-.hero-panel-note h2 {
-  font-size: clamp(1.8rem, 2.8vw, 2.7rem);
-  line-height: 1.05;
-}
-
-.hero-panel-note p {
-  max-width: 44ch;
-}
-
-.hero-ledger {
-  display: grid;
-  gap: 14px;
-}
-
-.ledger-item {
-  display: grid;
-  gap: 8px;
-  padding-top: 16px;
-  border-top: 1px solid var(--color-line);
-}
-
-.ledger-item:first-child {
-  padding-top: 0;
-  border-top: 0;
-}
-
-.ledger-item span {
-  font-size: 0.82rem;
-  letter-spacing: 0;
-  text-transform: uppercase;
-  color: var(--color-text-muted);
-}
-
-.ledger-item strong {
-  font-size: 1.02rem;
-  line-height: 1.5;
-  color: var(--color-text);
-}
-
-.metrics {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 12px;
-}
-
-.metric {
-  padding: 18px;
-  border-radius: var(--radius-md);
-  background: #fff;
-  border: 1px solid var(--color-line);
-}
-
-.metric strong {
-  display: block;
-  font-size: 1.5rem;
-  color: var(--color-accent-strong);
-}
-
-.metric span {
-  font-size: 0.95rem;
-  color: var(--color-text-muted);
 }
 
 .section-heading {
@@ -1026,8 +942,7 @@ p {
   padding: 72px 0 36px;
 }
 
-.page-hero:has(.breadcrumbs a[href="directions.html"]),
-.page-hero:has(.breadcrumbs a[href="services.html"]) {
+.page-hero--framed {
   background: #fff;
   border-bottom: 1px solid var(--color-line);
 }
@@ -1272,11 +1187,11 @@ p {
     --nav-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m3 11 9-8 9 8'/%3E%3Cpath d='M5 10v10h14V10'/%3E%3Cpath d='M10 20v-6h4v6'/%3E%3C/svg%3E");
   }
 
-  .nav-dropdown:first-of-type .nav-dropdown-toggle {
+  .nav-dropdown--directions .nav-dropdown-toggle {
     --nav-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpath d='m16 8-3 8-5 2 3-8 5-2Z'/%3E%3C/svg%3E");
   }
 
-  .nav-dropdown:nth-of-type(2) .nav-dropdown-toggle {
+  .nav-dropdown--services .nav-dropdown-toggle {
     --nav-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16'/%3E%3Crect x='3' y='8' width='18' height='12' rx='2'/%3E%3Cpath d='M3 14h18'/%3E%3C/svg%3E");
   }
 
@@ -1295,12 +1210,6 @@ p {
     font-size: 0.76rem;
     line-height: 1;
     text-align: center;
-  }
-
-  .nav-links a:focus-visible,
-  .lang-switcher a:focus-visible,
-  .nav-dropdown-toggle:focus-visible {
-    outline: 0;
   }
 
   .nav-links a::after,
@@ -1388,7 +1297,6 @@ p {
   .trust-panel,
   .home-services-grid,
   .footer-grid,
-  .metrics,
   .principle-list,
   .trust-points {
     grid-template-columns: 1fr;
@@ -1418,8 +1326,7 @@ p {
   .card,
   .feature-plate,
   .cta-panel,
-  .notice-panel,
-  .hero-panel {
+  .notice-panel {
     padding: 24px;
   }
 
@@ -1507,13 +1414,11 @@ p {
   .card,
   .feature-plate,
   .cta-panel,
-  .notice-panel,
-  .hero-panel,
-  .metric {
+  .notice-panel {
     padding: 20px;
   }
 
-  .hero-panel::before {
+  .hero-visual {
     min-height: 180px;
   }
 
