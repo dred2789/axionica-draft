@@ -800,22 +800,6 @@ p {
   margin-top: 24px;
 }
 
-.studio-kicker {
-  display: inline-flex;
-  align-items: center;
-  width: max-content;
-  max-width: 100%;
-  min-height: 32px;
-  padding: 7px 11px;
-  border: 1px solid var(--color-line);
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.76);
-  color: var(--color-accent-strong);
-  font-size: 0.78rem;
-  font-weight: 700;
-  line-height: 1.15;
-}
-
 .studio-needs-section {
   padding-top: 56px;
 }
@@ -832,13 +816,15 @@ p {
   top: 96px;
   display: grid;
   gap: 18px;
+  padding-top: 10px;
+  border-top: 2px solid var(--color-accent);
 }
 
 .studio-needs-block h2 {
-  font-size: clamp(1.82rem, 3vw, 2.62rem);
-  line-height: 1.06;
+  font-size: clamp(2rem, 3.35vw, 2.95rem);
+  line-height: 1.05;
   letter-spacing: 0;
-  max-width: 24ch;
+  max-width: 17ch;
 }
 
 .studio-section-copy {
@@ -858,14 +844,14 @@ p {
 
 .studio-situation-grid .studio-card {
   display: grid;
-  grid-template-columns: 58px minmax(0, 1fr);
-  gap: 24px;
+  grid-template-columns: 54px minmax(0, 1fr);
+  gap: 20px;
   min-height: 100%;
-  padding: 34px 0 36px;
+  padding: 32px 0;
   border: 0;
-  border-top: 1px solid rgba(28, 35, 43, 0.075);
+  border-top: 1px solid rgba(23, 27, 31, 0.1);
   border-radius: 0;
-  background: linear-gradient(180deg, rgba(55, 123, 245, 0.028), rgba(255, 255, 255, 0));
+  background: transparent;
 }
 
 .studio-card h3 {
@@ -882,9 +868,20 @@ p {
 .studio-scenario-number,
 .studio-flow-number {
   color: var(--color-accent);
-  font-size: 1rem;
+  font-size: 0.92rem;
   font-weight: 800;
   line-height: 1.2;
+}
+
+.studio-scenario-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(0, 102, 255, 0.18);
+  border-radius: var(--radius-sm);
+  background: rgba(0, 102, 255, 0.055);
 }
 
 .page-hero--studio {
@@ -1079,64 +1076,6 @@ p {
 .studio-services-section .service-row-link {
   padding-top: 10px;
   border-top: 1px solid rgba(28, 35, 43, 0.08);
-}
-
-.studio-cta-panel {
-  position: relative;
-  overflow: hidden;
-  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.76fr);
-  gap: 52px;
-  align-items: center;
-  padding: 48px;
-  border-color: rgba(55, 123, 245, 0.16);
-  background: linear-gradient(135deg, #fff 0%, #fff 56%, rgba(55, 123, 245, 0.08) 100%);
-}
-
-.studio-cta-panel h2 {
-  font-size: clamp(2rem, 3.2vw, 3rem);
-}
-
-.studio-cta-copy,
-.studio-cta-discuss {
-  display: grid;
-  gap: 16px;
-}
-
-.studio-cta-discuss {
-  padding: 0;
-  border: 0;
-  border-radius: 0;
-  background: transparent;
-}
-
-.studio-cta-discuss h3 {
-  font-size: 1rem;
-}
-
-.studio-cta-discuss ul {
-  display: grid;
-  gap: 12px;
-  margin: 0;
-  padding: 0;
-  color: var(--color-text-muted);
-  list-style: none;
-}
-
-.studio-cta-discuss li {
-  position: relative;
-  padding-left: 28px;
-  line-height: 1.55;
-}
-
-.studio-cta-discuss li::before {
-  content: "";
-  position: absolute;
-  top: 0.58em;
-  left: 0;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: var(--color-accent);
 }
 
 .service-entry h2 a,
@@ -1521,53 +1460,69 @@ p {
 
 .consulting-scenarios-layout {
   display: grid;
-  grid-template-columns: minmax(260px, 0.35fr) minmax(0, 1fr);
-  gap: 54px;
+  grid-template-columns: minmax(340px, 0.42fr) minmax(0, 1fr);
+  gap: 60px;
   align-items: start;
 }
 
 .consulting-scenarios-intro {
   position: sticky;
   top: 96px;
+  padding-top: 10px;
+  border-top: 2px solid var(--color-accent);
 }
 
 .consulting-scenarios-intro h2 {
-  max-width: 12ch;
+  max-width: 17ch;
+  font-size: clamp(2rem, 3.35vw, 2.95rem);
+  line-height: 1.05;
 }
 
 .consulting-scenario-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0 38px;
+  gap: 18px 44px;
 }
 
 .consulting-scenario {
   display: grid;
-  grid-template-columns: 48px minmax(0, 1fr);
-  gap: 18px;
-  padding: 28px 0;
-  border-top: 1px solid var(--color-line);
+  grid-template-columns: 54px minmax(0, 1fr);
+  gap: 20px;
+  padding: 32px 0;
+  border-top: 1px solid rgba(23, 27, 31, 0.1);
 }
 
 .consulting-scenario span,
 .consulting-format-step span {
   color: var(--color-accent);
-  font-size: 0.84rem;
+  font-size: 0.92rem;
   font-weight: 800;
   line-height: 1.2;
+}
+
+.consulting-scenario span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(0, 102, 255, 0.18);
+  border-radius: var(--radius-sm);
+  background: rgba(0, 102, 255, 0.055);
 }
 
 .consulting-scenario h3,
 .consulting-format-step h3,
 .consulting-artifact h3 {
-  font-size: clamp(1.08rem, 1.45vw, 1.32rem);
-  line-height: 1.18;
+  font-size: clamp(1.16rem, 1.58vw, 1.42rem);
+  line-height: 1.16;
 }
 
 .consulting-scenario p {
   grid-column: 2;
-  font-size: 0.99rem;
-  line-height: 1.66;
+  max-width: 64ch;
+  font-size: 1.02rem;
+  line-height: 1.76;
 }
 
 .consulting-formats-section {
@@ -1578,39 +1533,41 @@ p {
   position: relative;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 30px;
-  margin-top: 36px;
+  gap: 34px;
+  margin-top: 44px;
 }
 
 .consulting-format-step {
   position: relative;
   display: grid;
+  grid-template-rows: auto auto 1fr auto;
   align-content: start;
-  gap: 14px;
-  padding: 34px 28px 0 0;
-  border-top: 1px solid rgba(23, 27, 31, 0.18);
+  gap: 16px;
+  padding: 42px 30px 0 0;
+  border-top: 1px solid rgba(23, 27, 31, 0.14);
 }
 
 .consulting-format-step::before {
   content: "";
   position: absolute;
-  top: -6px;
+  top: -9px;
   left: 0;
-  width: 13px;
-  height: 13px;
+  width: 18px;
+  height: 18px;
   border: 2px solid var(--color-accent);
   border-radius: 50%;
   background: #f7f8fb;
+  box-shadow: 0 0 0 8px rgba(0, 102, 255, 0.08);
 }
 
 .consulting-format-step::after {
   content: "";
   position: absolute;
   top: -1px;
-  left: 18px;
-  right: -30px;
-  height: 1px;
-  background: linear-gradient(90deg, rgba(0, 102, 255, 0.74), rgba(23, 27, 31, 0.1));
+  left: 28px;
+  right: -34px;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(0, 102, 255, 0.7), rgba(0, 102, 255, 0.16));
 }
 
 .consulting-format-step:last-child::after {
@@ -1618,11 +1575,20 @@ p {
 }
 
 .consulting-result {
-  margin-top: 8px;
-  padding-top: 16px;
-  border-top: 1px solid rgba(23, 27, 31, 0.1);
+  margin-top: 10px;
+  min-height: 118px;
+  padding: 17px 18px;
+  border: 1px solid rgba(0, 102, 255, 0.13);
+  border-left: 2px solid rgba(0, 102, 255, 0.48);
+  background: rgba(255, 255, 255, 0.54);
   color: var(--color-text);
   font-weight: 600;
+  line-height: 1.66;
+}
+
+.consulting-format-step > p:not(.consulting-result) {
+  font-size: 1.02rem;
+  line-height: 1.72;
 }
 
 .consulting-deliverables-section {
@@ -1638,21 +1604,23 @@ p {
 .consulting-deliverables-section .section-heading p,
 .consulting-deliverables-summary p,
 .consulting-artifact p {
-  color: rgba(255, 255, 255, 0.76);
+  color: rgba(255, 255, 255, 0.84);
 }
 
 .consulting-deliverables-layout {
   display: grid;
-  grid-template-columns: minmax(280px, 0.42fr) minmax(0, 1fr);
-  gap: 44px;
+  grid-template-columns: minmax(300px, 0.42fr) minmax(0, 1fr);
+  gap: 56px;
   align-items: start;
-  margin-top: 36px;
+  margin-top: 42px;
 }
 
 .consulting-deliverables-summary {
+  position: relative;
   display: grid;
-  gap: 18px;
-  padding: 34px 0;
+  gap: 22px;
+  padding: 40px 0 40px 24px;
+  border-left: 2px solid rgba(0, 102, 255, 0.72);
   border-top: 1px solid rgba(255, 255, 255, 0.24);
   border-bottom: 1px solid rgba(255, 255, 255, 0.14);
 }
@@ -1662,40 +1630,53 @@ p {
   line-height: 1.06;
 }
 
+.consulting-deliverables-summary p {
+  font-size: 1.05rem;
+  line-height: 1.78;
+}
+
 .consulting-artifacts-list {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1px;
-  background: rgba(255, 255, 255, 0.12);
+  gap: 20px 26px;
+  background: transparent;
 }
 
 .consulting-artifact {
   position: relative;
   display: grid;
   align-content: start;
-  gap: 10px;
-  min-height: 174px;
-  padding: 26px 26px 26px 48px;
+  gap: 14px;
+  min-height: 190px;
+  padding: 30px 28px 32px 50px;
+  border-top: 1px solid rgba(255, 255, 255, 0.13);
   background: var(--color-dark);
 }
 
 .consulting-artifact::before {
   content: "";
   position: absolute;
-  top: 32px;
-  left: 24px;
-  width: 8px;
-  height: 8px;
+  top: 37px;
+  left: 25px;
+  width: 9px;
+  height: 9px;
   border-radius: 50%;
-  background: var(--color-accent);
+  background: rgba(77, 148, 255, 0.82);
+  box-shadow: 0 0 0 6px rgba(0, 102, 255, 0.12);
+}
+
+.consulting-artifact p {
+  max-width: 56ch;
+  font-size: 1.02rem;
+  line-height: 1.82;
 }
 
 .consulting-cta-panel {
-  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.42fr);
-  gap: 48px;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 0.34fr);
+  gap: 44px;
   align-items: center;
-  padding: 46px;
-  border-color: rgba(0, 102, 255, 0.16);
+  padding: 52px;
+  border-color: rgba(0, 102, 255, 0.13);
   background: #fff;
 }
 
@@ -1705,23 +1686,32 @@ p {
 }
 
 .consulting-cta-panel .hero-actions {
-  margin-top: 12px;
+  margin-top: 14px;
+}
+
+.consulting-cta-panel h2 {
+  max-width: 760px;
+  font-size: clamp(1.9rem, 3.05vw, 2.78rem);
+  line-height: 1.06;
 }
 
 .consulting-cta-aside {
-  padding-left: 28px;
-  border-left: 1px solid var(--color-line);
+  align-self: center;
+  padding-left: 34px;
+  border-left: 1px solid rgba(23, 27, 31, 0.1);
 }
 
 .consulting-cta-aside li {
   position: relative;
-  padding: 11px 0 11px 28px;
+  padding: 14px 0 14px 30px;
   color: var(--color-text);
-  line-height: 1.48;
+  font-size: 1.02rem;
+  line-height: 1.56;
 }
 
 .consulting-cta-aside li::before {
-  top: 1.02em;
+  top: 1.22em;
+  background: rgba(0, 102, 255, 0.82);
 }
 
 .cta-panel {
@@ -1943,7 +1933,7 @@ p {
   .consulting-diagnostics-layout,
   .consulting-scenarios-layout,
   .consulting-deliverables-layout {
-    gap: 34px;
+    gap: 40px;
   }
 
   .consulting-scenario-grid,
@@ -1952,7 +1942,19 @@ p {
   }
 
   .consulting-format-steps {
-    gap: 22px;
+    gap: 26px;
+  }
+
+  .consulting-scenarios-layout {
+    grid-template-columns: minmax(300px, 0.4fr) minmax(0, 1fr);
+  }
+
+  .consulting-scenario {
+    padding: 28px 0;
+  }
+
+  .consulting-artifact {
+    min-height: auto;
   }
 
   .studio-needs-block {
@@ -2193,7 +2195,6 @@ p {
   .home-services-grid,
   .footer-grid,
   .principle-list,
-  .studio-cta-panel,
   .studio-needs-block,
   .studio-output-showcase,
   .trust-points,
@@ -2214,6 +2215,7 @@ p {
 
   .consulting-scenarios-intro h2 {
     max-width: 18ch;
+    font-size: clamp(2rem, 6vw, 3rem);
   }
 
   .consulting-diagnostics-layout,
@@ -2234,13 +2236,13 @@ p {
   }
 
   .consulting-format-step {
-    padding: 0 0 30px 24px;
+    padding: 0 0 34px 24px;
     border-top: 0;
   }
 
   .consulting-format-step::before {
     top: 2px;
-    left: -27px;
+    left: -30px;
   }
 
   .consulting-format-step::after {
@@ -2248,13 +2250,13 @@ p {
   }
 
   .consulting-deliverables-summary {
-    padding: 28px 0;
+    padding: 30px 0 30px 22px;
   }
 
   .consulting-cta-aside {
-    padding: 24px 0 0;
+    padding: 26px 0 0;
     border-left: 0;
-    border-top: 1px solid var(--color-line);
+    border-top: 1px solid rgba(23, 27, 31, 0.1);
   }
 
   .studio-needs-intro {
@@ -2479,30 +2481,48 @@ p {
 
   .consulting-scenario {
     grid-template-columns: 1fr;
-    gap: 10px;
-    padding: 24px 0;
+    gap: 12px;
+    padding: 26px 0;
   }
 
   .consulting-scenario p {
     grid-column: auto;
   }
 
+  .consulting-scenario span {
+    width: 38px;
+    height: 38px;
+  }
+
   .consulting-format-step {
-    padding-bottom: 28px;
+    padding-bottom: 32px;
+  }
+
+  .consulting-result {
+    min-height: auto;
   }
 
   .consulting-artifact {
     min-height: auto;
-    padding: 24px 24px 24px 42px;
+    padding: 26px 20px 26px 42px;
   }
 
   .consulting-artifact::before {
-    top: 30px;
+    top: 32px;
     left: 20px;
   }
 
   .consulting-cta-panel {
-    padding: 24px;
+    padding: 28px 24px;
+  }
+
+  .consulting-cta-panel h2 {
+    max-width: 100%;
+  }
+
+  .consulting-cta-aside li {
+    padding-top: 12px;
+    padding-bottom: 12px;
   }
 
   .studio-situation-grid .studio-card {
@@ -2537,8 +2557,7 @@ p {
   }
 
   .studio-output-list .studio-card,
-  .studio-services-section .service-row,
-  .studio-cta-panel {
+  .studio-services-section .service-row {
     padding: 24px;
   }
 
