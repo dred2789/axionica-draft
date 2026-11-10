@@ -8,18 +8,15 @@ const prefersReducedMotion = window.matchMedia(
 
 /* ---------- Active nav link ---------- */
 if (navMenu) {
-  const currentPath = window.location.pathname;
-  const currentFile = currentPath.endsWith("/")
-    ? "index.html"
-    : currentPath.split("/").pop();
+  const normalizePath = (path) => path.replace(/index\.html$/, "").replace(/\/$/, "");
+  const currentPath = normalizePath(window.location.pathname);
   const navLinks = navMenu.querySelectorAll(".nav-links a");
 
   navLinks.forEach((link) => {
-    const linkFile =
+    const linkPath = normalizePath(
       new URL(link.getAttribute("href"), window.location.href).pathname
-        .split("/")
-        .pop() || "index.html";
-    const isCurrent = linkFile === currentFile;
+    );
+    const isCurrent = linkPath === currentPath;
 
     link.classList.toggle("is-active", isCurrent);
 

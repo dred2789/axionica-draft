@@ -16,6 +16,10 @@ MARKER = ".axionica-build"
 PUBLIC_ROOT = ("index.html", "404.html", "robots.txt", "sitemap.xml", "manifest.webmanifest")
 ASSET_EXTENSIONS = {".css", ".js", ".svg", ".jpg", ".jpeg", ".png", ".webp", ".avif", ".gif", ".ico", ".woff", ".woff2"}
 
+def page_url(path):
+    """Directory indexes have the same public path as their owning folder."""
+    return path[:-len('index.html')] if path.endswith('/index.html') else path
+
 
 def rewrite_text(text, owner, resolve):
     """Rewrite literal asset URLs, not arbitrary substrings or dynamic JS.
@@ -25,16 +29,19 @@ def rewrite_text(text, owner, resolve):
     """
     def url(value):
         parsed = urlsplit(value)
-        if not parsed.path or parsed.scheme or parsed.netloc or value.startswith('#'):
+        if not parsed.path or value.startswith('#'):
+            return value
+        if parsed.scheme or parsed.netloc:
             return value
         path = posixpath.normpath(parsed.path.lstrip('/') if value.startswith('/') else
                                   posixpath.join(posixpath.dirname(owner), parsed.path))
+
         if not path.startswith('assets/') or (Path(parsed.path).suffix.lower() not in ASSET_EXTENSIONS | {'.bak', '.md'}
                                                and 'assets/' not in parsed.path):
             return value
         target = resolve(path)
-        rewritten = '/' + target if value.startswith('/') else posixpath.relpath(target, posixpath.dirname(owner) or '.')
-        if value.startswith('./') and not rewritten.startswith('.'):
+        rewritten = '/' + target if value.startswith('/') or owner.endswith('.html') else posixpath.relpath(target, posixpath.dirname(owner) or '.')
+        if value.startswith('./') and not rewritten.startswith(('.', '/')):
             rewritten = './' + rewritten
         return rewritten + value[len(parsed.path):]
 
@@ -61,8 +68,8 @@ def rewrite_text(text, owner, resolve):
 def build():
     files = [ROOT / name for name in PUBLIC_ROOT]
     for language in ("ru", "en"):
-        pages = sorted(path for path in (ROOT / language).glob("*.html")
-                       if not path.name.startswith('.'))
+        pages = sorted(path for path in (ROOT / language).rglob("index.html")
+                       if not any(part.startswith('.') for part in path.relative_to(ROOT).parts))
         if not (ROOT / language / "index.html").is_file():
             raise SystemExit("Missing language homepage: " + language)
         files.extend(pages)

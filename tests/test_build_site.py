@@ -38,6 +38,28 @@ class BuildSiteTest(unittest.TestCase):
     def mapping(self):
         return json.loads((self.output / builder.MARKER).read_text())["assets"]
 
+    def test_directory_indexes_are_discovered_recursively(self):
+        for language in ('ru', 'en'):
+            self.put(language + '/directions/studio/index.html', '<a href="/' + language + '/">Home</a>')
+        builder.build()
+        for language in ('ru', 'en'):
+            self.assertTrue((self.output / language / 'directions/studio/index.html').is_file())
+            self.assertEqual(builder.page_url('/' + language + '/directions/studio/index.html'),
+                             '/' + language + '/directions/studio/')
+
+    def test_clean_nested_page_urls_and_resources(self):
+        self.put('ru/services/discovery/index.html', '''<link rel="canonical" href="https://YOUR-DOMAIN.TLD/ru/services/discovery/">
+<a href="/en/services/discovery/">EN</a><a href="/ru/directions/studio/?from=service#work">Studio</a>
+<a href="/ru/services/">Services</a><a href="/ru/">Home</a>
+<img src="/assets/icons/logo.svg"><a href="https://example.com/ru/studio.html">External</a>''')
+        builder.build()
+        html = (self.output / 'ru/services/discovery/index.html').read_text()
+        for expected in ('https://axionica.ru/ru/services/discovery/', '/en/services/discovery/',
+                         '/ru/directions/studio/?from=service#work', '/ru/services/', '/ru/',
+                         '/' + self.mapping()['assets/icons/logo.svg'],
+                         'https://example.com/ru/studio.html'):
+            self.assertIn('"' + expected + '"', html)
+
     def test_private_asset_references_fail(self):
         self.put('assets/css/main.css.bak', 'private')
         self.put('assets/css/main.css', 'x{background:url(main.css.bak)}')
@@ -90,7 +112,7 @@ x { background: url("https://example.com/assets/missing.svg"); mask:url(data:ima
 <img src="https://example.com/assets/no.svg"><a href="#thing">anchor</a>''')
         builder.build()
         html = (self.output / 'ru/index.html').read_text()
-        self.assertIn("url('../" + self.mapping()['assets/icons/logo.svg'] + "')", html)
+        self.assertIn("url('/" + self.mapping()['assets/icons/logo.svg'] + "')", html)
         self.assertIn('https://example.com/assets/no.svg', html)
         css = (self.output / self.mapping()['assets/css/main.css']).read_text()
         self.assertIn('url(data:image/svg+xml,%3Csvg%3E)', css)
@@ -138,7 +160,7 @@ x { background: url("https://example.com/assets/missing.svg"); mask:url(data:ima
         self.assertTrue((self.output / expected).is_file(), "asset filename must contain its SHA256 prefix")
         self.assertEqual(self.mapping(), {"assets/icons/logo.svg": expected})
         self.assertFalse((self.output / 'assets/icons/logo.svg').exists())
-        self.assertIn('../' + expected, (self.output / 'ru/index.html').read_text())
+        self.assertIn('/' + expected, (self.output / 'ru/index.html').read_text())
         self.assertEqual((self.output / 'sitemap.xml').read_text(), 'https://axionica.ru/ru/')
         for name, data in before.items():
             self.assertEqual((self.root / name).read_bytes(), data)

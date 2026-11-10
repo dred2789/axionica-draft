@@ -6,11 +6,28 @@ import subprocess
 
 import time
 import unittest
+import importlib.util
+from html.parser import HTMLParser
 from pathlib import Path
+from urllib.parse import urljoin, urlsplit
+from xml.etree import ElementTree
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
 ROOT = Path(__file__).resolve().parents[1]
+spec = importlib.util.spec_from_file_location('build_site', ROOT / 'scripts/build_site.py')
+assert spec is not None and spec.loader is not None
+builder = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(builder)
+
+
+class References(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.urls = []
+
+    def handle_starttag(self, tag, attrs):
+        self.urls.extend(value for key, value in attrs if key in ('href', 'src') and value)
 
 
 class NginxSmokeTest(unittest.TestCase):
@@ -58,9 +75,69 @@ class NginxSmokeTest(unittest.TestCase):
             path = "/" + file.relative_to(ROOT / "dist").as_posix()
             if path in ("/index.html", "/.axionica-build"):
                 continue
+            path = builder.page_url(path)
             with self.subTest(path=path), self.fetch(path) as response:
                 self.assertEqual(response.status, 404 if path == "/404.html" else 200)
                 self.assertEqual(response.read(), file.read_bytes())
+
+    def test_all_page_links_metadata_and_assets_resolve(self):
+        seen = set()
+        for file in sorted((ROOT / 'dist').glob('*/**/index.html')):
+            page = builder.page_url('/' + file.relative_to(ROOT / 'dist').as_posix())
+            parser = References()
+            parser.feed(file.read_text())
+            for value in parser.urls:
+                target = urlsplit(urljoin('https://axionica.ru' + page, value))
+                if target.netloc != 'axionica.ru':
+                    continue
+                self.assertFalse(target.path.endswith('.html'), (page, value))
+                if target.path not in seen:
+                    seen.add(target.path)
+                    with self.subTest(page=page, target=target.path), self.fetch(target.path) as response:
+                        self.assertEqual(response.status, 200)
+
+    def test_clean_pages_head_mime_queries_and_old_urls(self):
+        for file in sorted((ROOT / 'dist').glob('*/**/index.html')):
+            source = '/' + file.relative_to(ROOT / 'dist').as_posix()
+            clean = builder.page_url(source)
+            with self.subTest(clean=clean), self.fetch(clean + '?source=test') as response:
+                self.assertEqual(response.status, 200)
+                self.assertEqual(response.geturl(), self.base + clean + '?source=test')
+                self.assertEqual(response.read(), file.read_bytes())
+            with self.fetch(clean, method='HEAD') as response:
+                self.assertEqual(response.status, 200)
+                self.assertIn('text/html', response.headers['Content-Type'])
+                self.assertEqual(response.read(), b'')
+            parts = clean.strip('/').split('/')
+            old = '/' + parts[0] + '/' + (parts[-1] if len(parts) > 1 else 'index') + '.html'
+            for alias in set((old, source, clean.rstrip('/') + '.html')):
+                with self.subTest(alias=alias), self.fetch(alias) as response:
+                    self.assertEqual(response.status, 404)
+                    self.assertEqual(response.geturl(), self.base + alias)
+            with self.fetch(clean.rstrip('/') + '?source=slash') as response:
+                self.assertEqual(response.status, 200)
+                self.assertEqual(response.geturl(), self.base + clean + '?source=slash')
+                self.assertEqual(response.read(), file.read_bytes())
+
+    def test_sitemap_matches_canonical_and_language_versions(self):
+        namespace = {'s': 'http://www.sitemaps.org/schemas/sitemap/0.9',
+                     'x': 'http://www.w3.org/1999/xhtml'}
+        tree = ElementTree.parse(ROOT / 'dist/sitemap.xml')
+        locations = [entry.text for entry in tree.findall('s:url/s:loc', namespace)]
+        pages = sorted((ROOT / 'dist').glob('*/**/index.html'))
+        expected = {'https://axionica.ru' + builder.page_url('/' + page.relative_to(ROOT / 'dist').as_posix())
+                    for page in pages}
+        self.assertEqual(len(locations), len(expected))
+        self.assertEqual(set(locations), expected)
+        for page in pages:
+            source = '/' + page.relative_to(ROOT / 'dist').as_posix()
+            canonical = 'https://axionica.ru' + builder.page_url(source)
+            self.assertIn('rel="canonical" href="' + canonical + '"', page.read_text())
+            for language in ('ru', 'en'):
+                alternate = 'https://axionica.ru' + builder.page_url('/' + language + '/' + page.relative_to(ROOT / 'dist').as_posix().split('/', 1)[1])
+                self.assertIn('hreflang="' + language + '" href="' + alternate + '"', page.read_text())
+        for alternate in tree.findall('s:url/x:link', namespace):
+            self.assertIn(alternate.attrib['href'], expected)
 
     def test_language_indexes_and_root_redirect(self):
         for path, target in [("/", "/ru/"), ("/index.html", "/ru/"),
