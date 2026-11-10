@@ -1,216 +1,216 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <!-- Replace YOUR-DOMAIN.TLD with the production domain before launch. -->
+
   <url>
-    <loc>https://YOUR-DOMAIN.TLD/ru/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://YOUR-DOMAIN.TLD/ru/" />
+    <loc>https://axionica.ru/ru/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://axionica.ru/ru/" />
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN.TLD/en/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://YOUR-DOMAIN.TLD/ru/" />
+    <loc>https://axionica.ru/en/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://axionica.ru/ru/" />
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN.TLD/ru/directions/accelerator/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/directions/accelerator/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/directions/accelerator/" />
+    <loc>https://axionica.ru/ru/directions/accelerator/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/directions/accelerator/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/directions/accelerator/" />
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN.TLD/en/directions/accelerator/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/directions/accelerator/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/directions/accelerator/" />
+    <loc>https://axionica.ru/en/directions/accelerator/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/directions/accelerator/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/directions/accelerator/" />
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN.TLD/ru/services/ai-automation/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/services/ai-automation/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/services/ai-automation/" />
+    <loc>https://axionica.ru/ru/services/ai-automation/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/services/ai-automation/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/services/ai-automation/" />
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN.TLD/en/services/ai-automation/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/services/ai-automation/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/services/ai-automation/" />
+    <loc>https://axionica.ru/en/services/ai-automation/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/services/ai-automation/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/services/ai-automation/" />
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN.TLD/ru/services/ai-training/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/services/ai-training/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/services/ai-training/" />
+    <loc>https://axionica.ru/ru/services/ai-training/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/services/ai-training/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/services/ai-training/" />
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN.TLD/en/services/ai-training/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/services/ai-training/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/services/ai-training/" />
+    <loc>https://axionica.ru/en/services/ai-training/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/services/ai-training/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/services/ai-training/" />
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN.TLD/ru/directions/capital/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/directions/capital/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/directions/capital/" />
+    <loc>https://axionica.ru/ru/directions/capital/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/directions/capital/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/directions/capital/" />
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN.TLD/en/directions/capital/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/directions/capital/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/directions/capital/" />
+    <loc>https://axionica.ru/en/directions/capital/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/directions/capital/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/directions/capital/" />
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN.TLD/ru/cases/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/cases/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/cases/" />
+    <loc>https://axionica.ru/ru/cases/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/cases/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/cases/" />
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN.TLD/en/cases/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/cases/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/cases/" />
+    <loc>https://axionica.ru/en/cases/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/cases/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/cases/" />
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN.TLD/ru/directions/consulting/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/directions/consulting/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/directions/consulting/" />
+    <loc>https://axionica.ru/ru/directions/consulting/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/directions/consulting/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/directions/consulting/" />
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN.TLD/en/directions/consulting/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/directions/consulting/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/directions/consulting/" />
+    <loc>https://axionica.ru/en/directions/consulting/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/directions/consulting/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/directions/consulting/" />
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN.TLD/ru/contacts/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/contacts/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/contacts/" />
+    <loc>https://axionica.ru/ru/contacts/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/contacts/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/contacts/" />
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN.TLD/en/contacts/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/contacts/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/contacts/" />
+    <loc>https://axionica.ru/en/contacts/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/contacts/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/contacts/" />
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN.TLD/ru/cookies/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/cookies/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/cookies/" />
+    <loc>https://axionica.ru/ru/cookies/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/cookies/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/cookies/" />
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN.TLD/en/cookies/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/cookies/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/cookies/" />
+    <loc>https://axionica.ru/en/cookies/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/cookies/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/cookies/" />
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN.TLD/ru/directions/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/directions/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/directions/" />
+    <loc>https://axionica.ru/ru/directions/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/directions/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/directions/" />
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN.TLD/en/directions/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/directions/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/directions/" />
+    <loc>https://axionica.ru/en/directions/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/directions/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/directions/" />
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN.TLD/ru/services/discovery/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/services/discovery/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/services/discovery/" />
+    <loc>https://axionica.ru/ru/services/discovery/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/services/discovery/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/services/discovery/" />
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN.TLD/en/services/discovery/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/services/discovery/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/services/discovery/" />
+    <loc>https://axionica.ru/en/services/discovery/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/services/discovery/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/services/discovery/" />
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN.TLD/ru/insights/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/insights/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/insights/" />
+    <loc>https://axionica.ru/ru/insights/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/insights/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/insights/" />
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN.TLD/en/insights/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/insights/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/insights/" />
+    <loc>https://axionica.ru/en/insights/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/insights/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/insights/" />
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN.TLD/ru/services/it-consulting/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/services/it-consulting/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/services/it-consulting/" />
+    <loc>https://axionica.ru/ru/services/it-consulting/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/services/it-consulting/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/services/it-consulting/" />
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN.TLD/en/services/it-consulting/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/services/it-consulting/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/services/it-consulting/" />
+    <loc>https://axionica.ru/en/services/it-consulting/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/services/it-consulting/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/services/it-consulting/" />
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN.TLD/ru/personal-data-consent/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/personal-data-consent/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/personal-data-consent/" />
+    <loc>https://axionica.ru/ru/personal-data-consent/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/personal-data-consent/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/personal-data-consent/" />
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN.TLD/en/personal-data-consent/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/personal-data-consent/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/personal-data-consent/" />
+    <loc>https://axionica.ru/en/personal-data-consent/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/personal-data-consent/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/personal-data-consent/" />
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN.TLD/ru/privacy/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/privacy/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/privacy/" />
+    <loc>https://axionica.ru/ru/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/privacy/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/privacy/" />
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN.TLD/en/privacy/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/privacy/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/privacy/" />
+    <loc>https://axionica.ru/en/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/privacy/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/privacy/" />
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN.TLD/ru/services/product-studio/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/services/product-studio/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/services/product-studio/" />
+    <loc>https://axionica.ru/ru/services/product-studio/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/services/product-studio/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/services/product-studio/" />
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN.TLD/en/services/product-studio/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/services/product-studio/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/services/product-studio/" />
+    <loc>https://axionica.ru/en/services/product-studio/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/services/product-studio/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/services/product-studio/" />
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN.TLD/ru/services/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/services/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/services/" />
+    <loc>https://axionica.ru/ru/services/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/services/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/services/" />
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN.TLD/en/services/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/services/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/services/" />
+    <loc>https://axionica.ru/en/services/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/services/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/services/" />
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN.TLD/ru/services/startup-packaging/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/services/startup-packaging/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/services/startup-packaging/" />
+    <loc>https://axionica.ru/ru/services/startup-packaging/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/services/startup-packaging/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/services/startup-packaging/" />
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN.TLD/en/services/startup-packaging/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/services/startup-packaging/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/services/startup-packaging/" />
+    <loc>https://axionica.ru/en/services/startup-packaging/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/services/startup-packaging/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/services/startup-packaging/" />
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN.TLD/ru/services/startup-tracking/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/services/startup-tracking/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/services/startup-tracking/" />
+    <loc>https://axionica.ru/ru/services/startup-tracking/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/services/startup-tracking/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/services/startup-tracking/" />
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN.TLD/en/services/startup-tracking/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/services/startup-tracking/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/services/startup-tracking/" />
+    <loc>https://axionica.ru/en/services/startup-tracking/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/services/startup-tracking/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/services/startup-tracking/" />
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN.TLD/ru/directions/studio/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/directions/studio/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/directions/studio/" />
+    <loc>https://axionica.ru/ru/directions/studio/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/directions/studio/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/directions/studio/" />
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN.TLD/en/directions/studio/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/directions/studio/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/directions/studio/" />
+    <loc>https://axionica.ru/en/directions/studio/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/directions/studio/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/directions/studio/" />
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN.TLD/ru/team/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/team/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/team/" />
+    <loc>https://axionica.ru/ru/team/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/team/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/team/" />
   </url>
   <url>
-    <loc>https://YOUR-DOMAIN.TLD/en/team/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/team/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN.TLD/en/team/" />
+    <loc>https://axionica.ru/en/team/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/team/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/team/" />
   </url>
 </urlset>
