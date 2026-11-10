@@ -16,6 +16,9 @@
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="en_US" />
     <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" />
     <link rel="stylesheet" href="../assets/css/main.css" />
     <link rel="canonical" href="https://YOUR-DOMAIN.TLD/en/studio.html" />
     <link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/studio.html" />
@@ -66,7 +69,7 @@
         </div>
       </header>
       <main>
-        <section class="page-hero page-hero--framed page-hero--studio">
+        <section class="page-hero page-hero--framed page-hero--direction">
           <div class="container">
             <nav class="breadcrumbs fade-in" aria-label="Breadcrumbs">
               <ol>
@@ -91,7 +94,7 @@
 
         <section class="section studio-needs-section">
           <div class="container">
-            <div class="fade-in studio-needs-block">
+            <div class="fade-in split-layout split-layout--sticky studio-needs-block">
               <div class="studio-needs-intro">
                 <h2>When Axionica Studio is needed</h2>
                 <p class="studio-section-copy">
@@ -100,9 +103,9 @@
                   setup, for what budget and how to keep control along the way.
                 </p>
               </div>
-              <div class="studio-situation-grid">
-                <article class="studio-card">
-                  <span class="studio-scenario-number">01</span>
+              <div class="scenario-grid scenario-grid--studio studio-situation-grid">
+                <article class="scenario-card scenario-card--studio studio-card">
+                  <span class="scenario-card__number studio-scenario-number">01</span>
                   <div>
                     <h3>There is an idea, but no clear development plan</h3>
                     <p>
@@ -112,8 +115,8 @@
                     </p>
                   </div>
                 </article>
-                <article class="studio-card">
-                  <span class="studio-scenario-number">02</span>
+                <article class="scenario-card scenario-card--studio studio-card">
+                  <span class="scenario-card__number studio-scenario-number">02</span>
                   <div>
                     <h3>An MVP needs to be launched quickly</h3>
                     <p>
@@ -124,8 +127,8 @@
                     </p>
                   </div>
                 </article>
-                <article class="studio-card">
-                  <span class="studio-scenario-number">03</span>
+                <article class="scenario-card scenario-card--studio studio-card">
+                  <span class="scenario-card__number studio-scenario-number">03</span>
                   <div>
                     <h3>Development is already moving, but getting stuck</h3>
                     <p>
@@ -135,8 +138,8 @@
                     </p>
                   </div>
                 </article>
-                <article class="studio-card">
-                  <span class="studio-scenario-number">04</span>
+                <article class="scenario-card scenario-card--studio studio-card">
+                  <span class="scenario-card__number studio-scenario-number">04</span>
                   <div>
                     <h3>A foundation for further growth is needed</h3>
                     <p>
@@ -151,7 +154,7 @@
           </div>
         </section>
 
-        <section class="section process-section-dark studio-control-section">
+        <section class="section section--dark process-section-dark studio-control-section">
           <div class="container">
             <div class="section-header fade-in">
               <h2>How we keep development manageable</h2>
@@ -160,17 +163,17 @@
                 transparent priorities, regular result checks, budget control and a clear
                 connection between team tasks and business goals.
               </p>
-              <div class="studio-control-grid">
-                <article class="studio-card">
-                  <span class="studio-flow-number">01</span>
+              <div class="process-flow process-flow--dark studio-control-grid">
+                <article class="process-flow__step studio-card">
+                  <span class="process-flow__number studio-flow-number">01</span>
                   <h3>We fix the goal and boundaries</h3>
                   <p>
                     Before starting, we define which business task the product solves, what
                     result counts as success and what scope is actually needed for the first stage.
                   </p>
                 </article>
-                <article class="studio-card">
-                  <span class="studio-flow-number">02</span>
+                <article class="process-flow__step studio-card">
+                  <span class="process-flow__number studio-flow-number">02</span>
                   <h3>We build the product structure</h3>
                   <p>
                     We break the product into scenarios, epics, modules and tasks. This helps
@@ -178,24 +181,24 @@
                     development.
                   </p>
                 </article>
-                <article class="studio-card">
-                  <span class="studio-flow-number">03</span>
+                <article class="process-flow__step studio-card">
+                  <span class="process-flow__number studio-flow-number">03</span>
                   <h3>We design architecture in advance</h3>
                   <p>
                     We think through the technical foundation, integrations, data, user roles
                     and constraints. This lowers the risk of expensive rebuilds after launch.
                   </p>
                 </article>
-                <article class="studio-card">
-                  <span class="studio-flow-number">04</span>
+                <article class="process-flow__step studio-card">
+                  <span class="process-flow__number studio-flow-number">04</span>
                   <h3>We work in short iterations</h3>
                   <p>
                     We show intermediate results, collect feedback and adjust direction before
                     mistakes become expensive.
                   </p>
                 </article>
-                <article class="studio-card">
-                  <span class="studio-flow-number">05</span>
+                <article class="process-flow__step studio-card">
+                  <span class="process-flow__number studio-flow-number">05</span>
                   <h3>We control budget and changes</h3>
                   <p>
                     We track effort, scope changes, technical risks and the effect of new
@@ -203,8 +206,8 @@
                     specific decisions are made.
                   </p>
                 </article>
-                <article class="studio-card">
-                  <span class="studio-flow-number">06</span>
+                <article class="process-flow__step studio-card">
+                  <span class="process-flow__number studio-flow-number">06</span>
                   <h3>We transfer control to the client</h3>
                   <p>
                     Documentation, source code, backlog, architectural decisions and product
@@ -217,7 +220,7 @@
           </div>
         </section>
 
-        <section class="section studio-output-section">
+        <section class="section section--soft studio-output-section">
           <div class="container">
             <div class="section-heading fade-in">
               <h2>What the client gets at the end</h2>
@@ -226,8 +229,8 @@
                 product process and clear artifacts that can be used to keep developing the product.
               </p>
             </div>
-            <div class="studio-output-showcase fade-in">
-              <article class="studio-output-summary">
+            <div class="deliverables deliverables--studio studio-output-showcase fade-in">
+              <article class="deliverables__summary studio-output-summary">
                 <h3>Managed product process</h3>
                 <p>
                   The client gets not only code, but a clear system for working with the product:
@@ -235,28 +238,28 @@
                   be developed further and how to plan the next step.
                 </p>
               </article>
-              <div class="studio-output-list">
-                <article class="studio-card">
+              <div class="deliverables__grid studio-output-list">
+                <article class="deliverables__item studio-card">
                   <h3>Product scope</h3>
                   <p>A clear product scope: what enters the first stage, what stays for later iterations and why.</p>
                 </article>
-                <article class="studio-card">
+                <article class="deliverables__item studio-card">
                   <h3>Backlog</h3>
                   <p>A structured backlog: epics, user scenarios, tasks and priorities.</p>
                 </article>
-                <article class="studio-card">
+                <article class="deliverables__item studio-card">
                   <h3>Architecture</h3>
                   <p>A technical solution scheme, key integrations, user roles, data and constraints.</p>
                 </article>
-                <article class="studio-card">
+                <article class="deliverables__item studio-card">
                   <h3>Working product</h3>
                   <p>An MVP, module, service or platform that can be used, tested, shown to clients and developed further.</p>
                 </article>
-                <article class="studio-card">
+                <article class="deliverables__item studio-card">
                   <h3>Documentation</h3>
                   <p>Description of product logic, decisions, processes, API, scenarios and technical details.</p>
                 </article>
-                <article class="studio-card">
+                <article class="deliverables__item studio-card">
                   <h3>Development control</h3>
                   <p>Understanding of the next stage: which functions to develop, which risks to account for and how to plan budget.</p>
                 </article>
@@ -274,14 +277,14 @@
                 development, or move to custom development if the task and first scope are already clear.
               </p>
             </div>
-            <div class="service-ledger fade-in">
-              <article class="service-row">
+            <div class="service-grid fade-in">
+              <article class="service-card">
                 <h3 class="service-row-title"><a href="discovery.html">Discovery</a></h3>
                 <p class="service-row-purpose">We help turn an idea into a clear product plan.</p>
                 <p class="service-row-copy">We research the market, competitors, users and the business task. We form hypotheses, recommendations, an architectural approach, interface prototypes and a task backlog for project launch.</p>
                 <a class="service-row-link" href="discovery.html">Learn more about Discovery</a>
               </article>
-              <article class="service-row">
+              <article class="service-card">
                 <h3 class="service-row-title"><a href="product-studio.html">Custom development</a></h3>
                 <p class="service-row-purpose">We develop digital products, from MVPs to scalable platforms.</p>
                 <p class="service-row-copy">We quickly assemble first product versions, test hypotheses, design convenient interfaces and create reliable solutions for growth, automation and business development.</p>
@@ -293,8 +296,8 @@
 
         <section class="section">
           <div class="container">
-            <div class="cta-panel consulting-cta-panel fade-in">
-              <div class="consulting-cta-copy">
+            <div class="cta-panel cta-panel--direction fade-in">
+              <div class="cta-panel__copy">
                 <h2>Let’s discuss the product and decide where to start</h2>
                 <p>
                   On the first call, we will review the idea, current stage, timeline limits
@@ -306,7 +309,7 @@
                   <a class="button-secondary" href="services.html">View services</a>
                 </div>
               </div>
-              <aside class="consulting-cta-aside" aria-label="What we will discuss">
+              <aside class="cta-panel__aside" aria-label="What we will discuss">
                 <ul>
                   <li>which business task the product must solve;</li>
                   <li>which materials already exist: idea, specification, prototype, backlog or existing system;</li>

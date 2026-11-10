@@ -16,6 +16,9 @@
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="en_US" />
     <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" />
     <link rel="stylesheet" href="../assets/css/main.css" />
     <link rel="canonical" href="https://YOUR-DOMAIN.TLD/en/consulting.html" />
     <link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/consulting.html" />
@@ -66,7 +69,7 @@
         </div>
       </header>
       <main>
-        <section class="page-hero page-hero--framed page-hero--studio">
+        <section class="page-hero page-hero--framed page-hero--direction">
           <div class="container">
             <nav class="breadcrumbs fade-in" aria-label="Breadcrumbs">
               <ol>
@@ -98,20 +101,20 @@
                 applying AI to repeatable business workflows and training employees to work with AI tools.
               </p>
             </div>
-            <div class="service-ledger fade-in">
-              <article class="service-row" id="it-consulting">
+            <div class="service-grid fade-in">
+              <article class="service-card" id="it-consulting">
                 <h3 class="service-row-title"><a href="it-consulting.html">IT consulting</a></h3>
                 <p class="service-row-purpose">We help make IT processes more transparent, efficient and manageable.</p>
                 <p class="service-row-copy">We analyze processes, the team, architecture and tools. We find bottlenecks and growth points, then form practical recommendations to reduce costs, increase development speed and improve IT manageability.</p>
                 <a class="service-row-link" href="it-consulting.html">Learn more about IT consulting</a>
               </article>
-              <article class="service-row" id="ai-automation">
+              <article class="service-card" id="ai-automation">
                 <h3 class="service-row-title"><a href="ai-automation.html">AI process automation</a></h3>
                 <p class="service-row-purpose">We reduce manual load in repeatable business processes with AI tools.</p>
                 <p class="service-row-copy">We analyze the process, capture “before” metrics, design AI automation, implement the solution and evaluate the “after” effect. This fits tasks where measurable business results matter.</p>
                 <a class="service-row-link" href="ai-automation.html">Learn more about AI automation</a>
               </article>
-              <article class="service-row" id="ai-training">
+              <article class="service-card" id="ai-training">
                 <h3 class="service-row-title"><a href="ai-training.html">Employee training for AI work</a></h3>
                 <p class="service-row-purpose">We train teams to apply AI tools in real work tasks.</p>
                 <p class="service-row-copy">We show how to use AI in daily processes: for analysis, texts, documents, finding solutions and automating routine work. We help form a shared approach, practical skills and a base for further AI implementation inside departments.</p>
@@ -122,7 +125,7 @@
         </section>
 
         <section class="section consulting-diagnostics-section">
-          <div class="container consulting-diagnostics-layout">
+          <div class="container split-layout consulting-diagnostics-layout">
             <div class="consulting-diagnostics-copy fade-in">
               <div class="section-heading">
                 <h2>What we examine in Consulting</h2>
@@ -159,12 +162,12 @@
         </section>
 
         <section class="section consulting-scenarios-section">
-          <div class="container consulting-scenarios-layout">
+          <div class="container split-layout split-layout--sticky consulting-scenarios-layout">
             <div class="consulting-scenarios-intro fade-in">
               <h2>When Axionica Consulting is needed</h2>
             </div>
-            <div class="consulting-scenario-grid">
-              <article class="consulting-scenario fade-in">
+            <div class="scenario-grid scenario-grid--consulting consulting-scenario-grid">
+              <article class="scenario-card scenario-card--consulting consulting-scenario fade-in">
                 <span>01</span>
                 <h3>The IT team is working, but manageability is low</h3>
                 <p>
@@ -173,7 +176,7 @@
                   management, roles, communication, backlog and result control.
                 </p>
               </article>
-              <article class="consulting-scenario fade-in">
+              <article class="scenario-card scenario-card--consulting consulting-scenario fade-in">
                 <span>02</span>
                 <h3>Development has become expensive and unpredictable</h3>
                 <p>
@@ -182,7 +185,7 @@
                   a more transparent development management model.
                 </p>
               </article>
-              <article class="consulting-scenario fade-in">
+              <article class="scenario-card scenario-card--consulting consulting-scenario fade-in">
                 <span>03</span>
                 <h3>Processes contain a lot of manual work</h3>
                 <p>
@@ -191,7 +194,7 @@
                   a measurable effect.
                 </p>
               </article>
-              <article class="consulting-scenario fade-in">
+              <article class="scenario-card scenario-card--consulting consulting-scenario fade-in">
                 <span>04</span>
                 <h3>The company wants to implement AI, but it is unclear where</h3>
                 <p>
@@ -200,7 +203,7 @@
                   reduce errors or improve decision quality.
                 </p>
               </article>
-              <article class="consulting-scenario fade-in">
+              <article class="scenario-card scenario-card--consulting consulting-scenario fade-in">
                 <span>05</span>
                 <h3>Architecture slows development</h3>
                 <p>
@@ -209,7 +212,7 @@
                   improvement plan.
                 </p>
               </article>
-              <article class="consulting-scenario fade-in">
+              <article class="scenario-card scenario-card--consulting consulting-scenario fade-in">
                 <span>06</span>
                 <h3>The team needs to learn how to work with AI</h3>
                 <p>
@@ -221,7 +224,7 @@
           </div>
         </section>
 
-        <section class="section consulting-formats-section">
+        <section class="section section--soft consulting-formats-section">
           <div class="container">
             <div class="section-heading fade-in">
               <h2>Work formats</h2>
@@ -229,8 +232,8 @@
                 We choose the format for the task: from a short external view to supporting changes inside the team.
               </p>
             </div>
-            <div class="consulting-format-steps">
-              <article class="consulting-format-step fade-in">
+            <div class="process-flow process-flow--consulting consulting-format-steps">
+              <article class="process-flow__step consulting-format-step fade-in">
                 <span>01</span>
                 <h3>Express audit</h3>
                 <p>
@@ -239,7 +242,7 @@
                 </p>
                 <p class="consulting-result">Result: a list of problems, quick improvements and recommendations for the next step.</p>
               </article>
-              <article class="consulting-format-step fade-in">
+              <article class="process-flow__step consulting-format-step fade-in">
                 <span>02</span>
                 <h3>Pre-project diagnostics</h3>
                 <p>
@@ -248,7 +251,7 @@
                 </p>
                 <p class="consulting-result">Result: current-state map, target model, change roadmap, effect estimate and implementation priorities.</p>
               </article>
-              <article class="consulting-format-step fade-in">
+              <article class="process-flow__step consulting-format-step fade-in">
                 <span>03</span>
                 <h3>Change support</h3>
                 <p>
@@ -261,7 +264,7 @@
           </div>
         </section>
 
-        <section class="section consulting-deliverables-section">
+        <section class="section section--dark consulting-deliverables-section">
           <div class="container">
             <div class="section-heading fade-in">
               <h2>What the client receives at the end</h2>
@@ -270,8 +273,8 @@
                 that can be implemented, discussed with the team and tied to business effect.
               </p>
             </div>
-            <div class="consulting-deliverables-layout">
-              <article class="consulting-deliverables-summary fade-in">
+            <div class="deliverables deliverables--dark consulting-deliverables-layout">
+              <article class="deliverables__summary consulting-deliverables-summary fade-in">
                 <h3>Practical change plan</h3>
                 <p>
                   The client receives the structure of the current situation, a list of bottlenecks,
@@ -279,28 +282,28 @@
                   by which metrics to evaluate the result.
                 </p>
               </article>
-              <div class="consulting-artifacts-list">
-                <article class="consulting-artifact fade-in">
+              <div class="deliverables__grid consulting-artifacts-list">
+                <article class="deliverables__item consulting-artifact fade-in">
                   <h3>Current-state map</h3>
                   <p>Description of processes, roles, systems, problem areas and constraints.</p>
                 </article>
-                <article class="consulting-artifact fade-in">
+                <article class="deliverables__item consulting-artifact fade-in">
                   <h3>List of bottlenecks</h3>
                   <p>Specific places where speed, money, quality or manageability are being lost.</p>
                 </article>
-                <article class="consulting-artifact fade-in">
+                <article class="deliverables__item consulting-artifact fade-in">
                   <h3>Change roadmap</h3>
                   <p>Improvement plan with priorities: what to do quickly, what requires preparation and what can be deferred.</p>
                 </article>
-                <article class="consulting-artifact fade-in">
+                <article class="deliverables__item consulting-artifact fade-in">
                   <h3>AI case map</h3>
                   <p>List of processes where AI or automation can have an effect, with an estimate of complexity and value.</p>
                 </article>
-                <article class="consulting-artifact fade-in">
+                <article class="deliverables__item consulting-artifact fade-in">
                   <h3>Effect metrics</h3>
                   <p>Indicators that can be used to compare the state before and after changes.</p>
                 </article>
-                <article class="consulting-artifact fade-in">
+                <article class="deliverables__item consulting-artifact fade-in">
                   <h3>Implementation recommendations</h3>
                   <p>Practical plan: which solutions to implement, with which roles, in what sequence and with which risks.</p>
                 </article>
@@ -311,8 +314,8 @@
 
         <section class="section">
           <div class="container">
-            <div class="cta-panel consulting-cta-panel fade-in">
-              <div class="consulting-cta-copy">
+            <div class="cta-panel cta-panel--direction fade-in">
+              <div class="cta-panel__copy">
                 <h2>Start with diagnostics of a process or IT team</h2>
                 <p>
                   During the first conversation, we will define where the most uncertainty is now:
@@ -327,7 +330,7 @@
                   <a class="button-secondary" href="services.html">Back to services</a>
                 </div>
               </div>
-              <aside class="consulting-cta-aside" aria-label="First conversation topics">
+              <aside class="cta-panel__aside" aria-label="First conversation topics">
                 <ul>
                   <li>development and architecture;</li>
                   <li>processes and manual operations;</li>

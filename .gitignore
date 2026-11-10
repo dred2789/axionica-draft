@@ -1,2 +1,7 @@
 .DS_Store
 Thumbs.db
+*.md
+*.MD
+texts/
+dist/
+__pycache__/

@@ -16,6 +16,9 @@
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="ru_RU" />
     <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" />
     <link rel="stylesheet" href="../assets/css/main.css" />
     <link rel="canonical" href="https://YOUR-DOMAIN.TLD/ru/studio.html" />
     <link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/studio.html" />
@@ -66,7 +69,7 @@
         </div>
       </header>
       <main>
-        <section class="page-hero page-hero--framed page-hero--studio">
+        <section class="page-hero page-hero--framed page-hero--direction">
           <div class="container">
             <nav class="breadcrumbs fade-in" aria-label="Хлебные крошки">
               <ol>
@@ -91,7 +94,7 @@
 
         <section class="section studio-needs-section">
           <div class="container">
-            <div class="fade-in studio-needs-block">
+            <div class="fade-in split-layout split-layout--sticky studio-needs-block">
               <div class="studio-needs-intro">
                 <h2>Когда нужен Axionica Studio</h2>
                 <p class="studio-section-copy">
@@ -100,9 +103,9 @@
                   за какой бюджет и как не потерять контроль по пути.
                 </p>
               </div>
-              <div class="studio-situation-grid">
-                <article class="studio-card">
-                  <span class="studio-scenario-number">01</span>
+              <div class="scenario-grid scenario-grid--studio studio-situation-grid">
+                <article class="scenario-card scenario-card--studio studio-card">
+                  <span class="scenario-card__number studio-scenario-number">01</span>
                   <div>
                     <h3>Есть идея, но нет понятного плана разработки</h3>
                     <p>
@@ -112,8 +115,8 @@
                     </p>
                   </div>
                 </article>
-                <article class="studio-card">
-                  <span class="studio-scenario-number">02</span>
+                <article class="scenario-card scenario-card--studio studio-card">
+                  <span class="scenario-card__number studio-scenario-number">02</span>
                   <div>
                     <h3>Нужно быстро запустить MVP</h3>
                     <p>
@@ -124,8 +127,8 @@
                     </p>
                   </div>
                 </article>
-                <article class="studio-card">
-                  <span class="studio-scenario-number">03</span>
+                <article class="scenario-card scenario-card--studio studio-card">
+                  <span class="scenario-card__number studio-scenario-number">03</span>
                   <div>
                     <h3>Разработка уже идет, но буксует</h3>
                     <p>
@@ -135,8 +138,8 @@
                     </p>
                   </div>
                 </article>
-                <article class="studio-card">
-                  <span class="studio-scenario-number">04</span>
+                <article class="scenario-card scenario-card--studio studio-card">
+                  <span class="scenario-card__number studio-scenario-number">04</span>
                   <div>
                     <h3>Нужна основа для дальнейшего роста</h3>
                     <p>
@@ -151,7 +154,7 @@
           </div>
         </section>
 
-        <section class="section process-section-dark studio-control-section">
+        <section class="section section--dark process-section-dark studio-control-section">
           <div class="container">
             <div class="section-header fade-in">
               <h2>Как мы держим разработку управляемой</h2>
@@ -160,41 +163,41 @@
                 объем работ, прозрачные приоритеты, регулярная проверка результата, контроль
                 бюджета и понятная связь между задачами команды и целями бизнеса.
               </p>
-              <div class="studio-control-grid">
-                <article class="studio-card">
-                  <span class="studio-flow-number">01</span>
+              <div class="process-flow process-flow--dark studio-control-grid">
+                <article class="process-flow__step studio-card">
+                  <span class="process-flow__number studio-flow-number">01</span>
                   <h3>Фиксируем цель и границы</h3>
                   <p>
                     До старта определяем, какую бизнес-задачу решает продукт, какой результат
                     считается успешным и какой объем работ действительно нужен на первом этапе.
                   </p>
                 </article>
-                <article class="studio-card">
-                  <span class="studio-flow-number">02</span>
+                <article class="process-flow__step studio-card">
+                  <span class="process-flow__number studio-flow-number">02</span>
                   <h3>Собираем продуктовую структуру</h3>
                   <p>
                     Разбиваем продукт на сценарии, эпики, модули и задачи. Это помогает видеть
                     не набор разрозненных фич, а логику развития продукта.
                   </p>
                 </article>
-                <article class="studio-card">
-                  <span class="studio-flow-number">03</span>
+                <article class="process-flow__step studio-card">
+                  <span class="process-flow__number studio-flow-number">03</span>
                   <h3>Проектируем архитектуру заранее</h3>
                   <p>
                     Продумываем техническую основу, интеграции, данные, роли пользователей
                     и ограничения. Это снижает риск дорогих переделок после запуска.
                   </p>
                 </article>
-                <article class="studio-card">
-                  <span class="studio-flow-number">04</span>
+                <article class="process-flow__step studio-card">
+                  <span class="process-flow__number studio-flow-number">04</span>
                   <h3>Работаем короткими итерациями</h3>
                   <p>
                     Показываем промежуточные результаты, собираем обратную связь и корректируем
                     направление до того, как ошибки становятся дорогими.
                   </p>
                 </article>
-                <article class="studio-card">
-                  <span class="studio-flow-number">05</span>
+                <article class="process-flow__step studio-card">
+                  <span class="process-flow__number studio-flow-number">05</span>
                   <h3>Контролируем бюджет и изменения</h3>
                   <p>
                     Отслеживаем трудозатраты, изменения scope, технические риски и влияние
@@ -202,8 +205,8 @@
                     принимаются те или иные решения.
                   </p>
                 </article>
-                <article class="studio-card">
-                  <span class="studio-flow-number">06</span>
+                <article class="process-flow__step studio-card">
+                  <span class="process-flow__number studio-flow-number">06</span>
                   <h3>Передаем контроль заказчику</h3>
                   <p>
                     Документация, исходный код, backlog, архитектурные решения и логика продукта
@@ -216,7 +219,7 @@
           </div>
         </section>
 
-        <section class="section studio-output-section">
+        <section class="section section--soft studio-output-section">
           <div class="container">
             <div class="section-heading fade-in">
               <h2>Что получает клиент на выходе</h2>
@@ -225,8 +228,8 @@
                 продуктовый процесс и понятные артефакты, с которыми можно развивать продукт дальше.
               </p>
             </div>
-            <div class="studio-output-showcase fade-in">
-              <article class="studio-output-summary">
+            <div class="deliverables deliverables--studio studio-output-showcase fade-in">
+              <article class="deliverables__summary studio-output-summary">
                 <h3>Управляемый продуктовый процесс</h3>
                 <p>
                   Клиент получает не только код, а понятную систему работы с продуктом:
@@ -234,28 +237,28 @@
                   дальше и как планировать следующий шаг.
                 </p>
               </article>
-              <div class="studio-output-list">
-                <article class="studio-card">
+              <div class="deliverables__grid studio-output-list">
+                <article class="deliverables__item studio-card">
                   <h3>Product scope</h3>
                   <p>Понятный объем продукта: что входит в первый этап, что остается на следующие итерации и почему.</p>
                 </article>
-                <article class="studio-card">
+                <article class="deliverables__item studio-card">
                   <h3>Backlog</h3>
                   <p>Структурированный backlog: эпики, пользовательские сценарии, задачи и приоритеты.</p>
                 </article>
-                <article class="studio-card">
+                <article class="deliverables__item studio-card">
                   <h3>Архитектура</h3>
                   <p>Техническая схема решения, ключевые интеграции, роли пользователей, данные и ограничения.</p>
                 </article>
-                <article class="studio-card">
+                <article class="deliverables__item studio-card">
                   <h3>Рабочий продукт</h3>
                   <p>MVP, модуль, сервис или платформа, которые можно использовать, тестировать, показывать клиентам и развивать дальше.</p>
                 </article>
-                <article class="studio-card">
+                <article class="deliverables__item studio-card">
                   <h3>Документация</h3>
                   <p>Описание логики продукта, решений, процессов, API, сценариев и технических особенностей.</p>
                 </article>
-                <article class="studio-card">
+                <article class="deliverables__item studio-card">
                   <h3>Контроль развития</h3>
                   <p>Понимание следующего этапа: какие функции развивать, какие риски учитывать и как планировать бюджет.</p>
                 </article>
@@ -273,14 +276,14 @@
                 или перейти к заказной разработке, если задача и первый объем уже понятны.
               </p>
             </div>
-            <div class="service-ledger fade-in">
-              <article class="service-row">
+            <div class="service-grid fade-in">
+              <article class="service-card">
                 <h3 class="service-row-title"><a href="discovery.html">Discovery</a></h3>
                 <p class="service-row-purpose">Помогаем превратить идею в понятный план продукта.</p>
                 <p class="service-row-copy">Исследуем рынок, конкурентов, пользователей и бизнес-задачу. Формируем гипотезы, рекомендации, архитектурный подход, прототипы интерфейсов и бэклог задач для запуска проекта.</p>
                 <a class="service-row-link" href="discovery.html">Подробнее о Discovery</a>
               </article>
-              <article class="service-row">
+              <article class="service-card">
                 <h3 class="service-row-title"><a href="product-studio.html">Заказная разработка</a></h3>
                 <p class="service-row-purpose">Разрабатываем цифровые продукты — от MVP до масштабируемых платформ.</p>
                 <p class="service-row-copy">Быстро собираем первые версии продукта, тестируем гипотезы, проектируем удобные интерфейсы и создаем надежные решения для роста, автоматизации и развития бизнеса.</p>
@@ -292,8 +295,8 @@
 
         <section class="section">
           <div class="container">
-            <div class="cta-panel consulting-cta-panel fade-in">
-              <div class="consulting-cta-copy">
+            <div class="cta-panel cta-panel--direction fade-in">
+              <div class="cta-panel__copy">
                 <h2>Обсудим продукт и поймем, с чего начать</h2>
                 <p>
                   На первом созвоне разберем идею, текущий этап, ограничения по срокам и бюджету.
@@ -305,7 +308,7 @@
                   <a class="button-secondary" href="services.html">Посмотреть услуги</a>
                 </div>
               </div>
-              <aside class="consulting-cta-aside" aria-label="Что обсудим">
+              <aside class="cta-panel__aside" aria-label="Что обсудим">
                 <ul>
                   <li>какую бизнес-задачу должен решить продукт;</li>
                   <li>какие материалы уже есть: идея, ТЗ, прототип, backlog или существующая система;</li>

@@ -20,6 +20,9 @@
     <meta property="og:locale" content="en_US" />
     <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml" />
     <link rel="manifest" href="../manifest.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" />
     <link rel="stylesheet" href="../assets/css/main.css" />
     <link rel="canonical" href="https://YOUR-DOMAIN.TLD/en/" />
     <link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/" />
@@ -133,7 +136,35 @@
               </div>
             </div>
 
-            <div class="hero-visual fade-in" aria-hidden="true"></div>
+            <div class="hero-visual fade-in" aria-hidden="true">
+              <svg class="axiom" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <radialGradient id="axCore" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="#5b79ff" stop-opacity="0.95" />
+                    <stop offset="100%" stop-color="#2347e6" stop-opacity="0.85" />
+                  </radialGradient>
+                </defs>
+                <g stroke="rgba(21,24,28,0.10)" fill="none" stroke-width="1">
+                  <circle cx="200" cy="200" r="60" />
+                  <circle cx="200" cy="200" r="110" />
+                  <circle cx="200" cy="200" r="165" />
+                </g>
+                <g class="axiom-ring">
+                  <circle cx="200" cy="35" r="6" fill="#3a5bd9" class="axiom-node" />
+                  <circle cx="365" cy="200" r="6" fill="#15876f" class="axiom-node" />
+                  <circle cx="200" cy="365" r="6" fill="#bd6a2c" class="axiom-node" />
+                  <circle cx="35" cy="200" r="6" fill="#6f57d4" class="axiom-node" />
+                </g>
+                <g class="axiom-ring axiom-ring--2">
+                  <circle cx="200" cy="90" r="3.5" fill="rgba(35,71,230,0.5)" />
+                  <circle cx="310" cy="200" r="3.5" fill="rgba(35,71,230,0.5)" />
+                  <circle cx="200" cy="310" r="3.5" fill="rgba(35,71,230,0.5)" />
+                  <circle cx="90" cy="200" r="3.5" fill="rgba(35,71,230,0.5)" />
+                </g>
+                <circle cx="200" cy="200" r="30" fill="url(#axCore)" />
+                <circle cx="200" cy="200" r="30" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1" />
+              </svg>
+            </div>
 
             <div class="hero-trust-grid fade-in" aria-label="Key trust factors">
               <article class="hero-trust-item">
@@ -165,8 +196,8 @@
                 reducing costs, growing startups, increasing revenue and return on investment.
               </p>
             </div>
-            <div class="cards-grid two">
-              <article class="card fade-in">
+            <div class="cards-grid two" data-stagger>
+              <article class="card card--studio fade-in">
                 <span class="icon-badge" aria-hidden="true">
                   <svg viewBox="0 0 24 24"><path d="M4 8h7v12H4z"/><path d="M13 4h7v16h-7z"/><path d="M4 4h7v2H4z"/></svg>
                 </span>
@@ -178,7 +209,7 @@
                 </p>
                 <a class="card-link" href="studio.html">Open direction</a>
               </article>
-              <article class="card fade-in">
+              <article class="card card--consulting fade-in">
                 <span class="icon-badge" aria-hidden="true">
                   <svg viewBox="0 0 24 24"><path d="M6 7h12"/><path d="M6 12h12"/><path d="M6 17h7"/><circle cx="16" cy="17" r="2"/></svg>
                 </span>
@@ -190,7 +221,7 @@
                 </p>
                 <a class="card-link" href="consulting.html">Open direction</a>
               </article>
-              <article class="card fade-in">
+              <article class="card card--accelerator fade-in">
                 <span class="icon-badge" aria-hidden="true">
                   <svg viewBox="0 0 24 24"><path d="M4 16c2.5-2.5 4.5-3.5 7-3.5 2.2 0 3.5.7 5 2.2L20 9"/><path d="M16 9h4v4"/><path d="M4 20h16"/></svg>
                 </span>
@@ -201,7 +232,7 @@
                 </p>
                 <a class="card-link" href="accelerator.html">Open direction</a>
               </article>
-              <article class="card fade-in">
+              <article class="card card--capital fade-in">
                 <span class="icon-badge" aria-hidden="true">
                   <svg viewBox="0 0 24 24"><path d="M12 3 5 6v5c0 4.5 2.6 7.6 7 10 4.4-2.4 7-5.5 7-10V6l-7-3z"/><path d="M9 12h6"/><path d="M12 9v6"/></svg>
                 </span>
@@ -249,7 +280,7 @@
                   </div>
                 </div>
               </div>
-              <div class="timeline fade-in">
+              <div class="timeline fade-in" data-stagger>
                 <p class="timeline-heading">Process</p>
                 <article class="timeline-step">
                   <div class="timeline-step-number">01</div>
@@ -297,44 +328,44 @@
               <h2>Services</h2>
               <p>We solve key business tasks with technology.</p>
             </div>
-            <div class="service-ledger fade-in">
-              <article class="service-row">
+            <div class="service-grid fade-in" data-stagger>
+              <article class="service-card">
                 <h3 class="service-row-title"><a href="discovery.html">Discovery</a></h3>
                 <p class="service-row-purpose">We help turn an idea into a clear product plan.</p>
                 <p class="service-row-copy">We research the market, competitors, users and the business task. We form hypotheses, recommendations, an architectural approach, interface prototypes and a task backlog for project launch.</p>
                 <a class="service-row-link" href="discovery.html">Learn more about Discovery</a>
               </article>
-              <article class="service-row">
+              <article class="service-card">
                 <h3 class="service-row-title"><a href="product-studio.html">Custom development</a></h3>
                 <p class="service-row-purpose">We develop digital products, from MVPs to scalable platforms.</p>
                 <p class="service-row-copy">We quickly assemble first product versions, test hypotheses, design convenient interfaces and create reliable solutions for growth, automation and business development.</p>
                 <a class="service-row-link" href="product-studio.html">Learn more about custom development</a>
               </article>
-              <article class="service-row">
+              <article class="service-card">
                 <h3 class="service-row-title"><a href="it-consulting.html">IT consulting</a></h3>
                 <p class="service-row-purpose">We help make IT processes more transparent, efficient and manageable.</p>
                 <p class="service-row-copy">We analyze processes, the team, architecture and tools. We find bottlenecks and growth points, then form practical recommendations to reduce costs, increase development speed and improve IT manageability.</p>
                 <a class="service-row-link" href="it-consulting.html">Learn more about IT consulting</a>
               </article>
-              <article class="service-row">
+              <article class="service-card">
                 <h3 class="service-row-title"><a href="ai-automation.html">AI process automation</a></h3>
                 <p class="service-row-purpose">We reduce manual load in repeatable business processes with AI tools.</p>
                 <p class="service-row-copy">We analyze the process, capture “before” metrics, design AI automation, implement the solution and evaluate the “after” effect. This fits tasks where measurable business results matter.</p>
                 <a class="service-row-link" href="ai-automation.html">Learn more about AI automation</a>
               </article>
-              <article class="service-row">
+              <article class="service-card">
                 <h3 class="service-row-title"><a href="ai-training.html">Employee training for AI work</a></h3>
                 <p class="service-row-purpose">We train teams to apply AI tools in real work tasks.</p>
                 <p class="service-row-copy">We show how to use AI in daily processes: for analysis, texts, documents, finding solutions and automating routine work. We help form a shared approach, practical skills and a base for further AI implementation inside departments.</p>
                 <a class="service-row-link" href="ai-training.html">Learn more about AI training</a>
               </article>
-              <article class="service-row">
+              <article class="service-card">
                 <h3 class="service-row-title"><a href="startup-tracking.html">Startup tracking</a></h3>
                 <p class="service-row-purpose">We help startup teams move faster from idea to sustainable growth.</p>
                 <p class="service-row-copy">We work with the product hypothesis, target audience, business model, metrics, sales and development plan. This fits teams that need an external view, focus and regular movement toward results.</p>
                 <a class="service-row-link" href="startup-tracking.html">Learn more about startup tracking</a>
               </article>
-              <article class="service-row">
+              <article class="service-card">
                 <h3 class="service-row-title"><a href="startup-packaging.html">Investor packaging</a></h3>
                 <p class="service-row-purpose">We help prepare the project for investor conversations.</p>
                 <p class="service-row-copy">We package the business model, financial model, market, growth strategy, risks, presentation and pitch. This fits projects that already have a clear development track and need to show investment attractiveness convincingly.</p>
@@ -354,7 +385,7 @@
                   commercialization and acceleration of digital products.
                 </p>
               </div>
-              <div class="trust-proof-list">
+              <div class="trust-proof-list" data-stagger>
                 <article class="trust-proof-item">
                   <span>01</span>
                   <div>
@@ -404,7 +435,7 @@
                 <div class="case-group-heading">
                   <h3>Digital Product Development</h3>
                 </div>
-                <div class="case-list">
+                <div class="case-list" data-stagger>
                   <div class="case-item">
                     <span class="case-item-number">01</span>
                     <div class="case-item-body">
@@ -453,7 +484,7 @@
                 <div class="case-group-heading">
                   <h3>Acceleration and Startups</h3>
                 </div>
-                <div class="case-list">
+                <div class="case-list" data-stagger>
                   <div class="case-item">
                     <span class="case-item-number">01</span>
                     <div class="case-item-body">
@@ -481,7 +512,7 @@
                 <div class="case-group-heading">
                   <h3>AI Automation</h3>
                 </div>
-                <div class="case-list">
+                <div class="case-list" data-stagger>
                   <div class="case-item">
                     <span class="case-item-number">01</span>
                     <div class="case-item-body">

@@ -2,8 +2,8 @@
   <title>Axionica</title>
   <defs>
     <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#17345f" />
-      <stop offset="100%" stop-color="#2d5b9f" />
+      <stop offset="0%" stop-color="#161717" />
+      <stop offset="100%" stop-color="#050505" />
     </linearGradient>
   </defs>
   <rect width="64" height="64" rx="18" fill="url(#g)" />

@@ -17,6 +17,9 @@
     <meta property="og:locale" content="ru_RU" />
     <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml" />
     <link rel="manifest" href="../manifest.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" />
     <link rel="stylesheet" href="../assets/css/main.css" />
     <link rel="canonical" href="https://YOUR-DOMAIN.TLD/ru/" />
     <link rel="alternate" hreflang="ru" href="https://YOUR-DOMAIN.TLD/ru/" />
@@ -130,7 +133,35 @@
               </div>
             </div>
 
-            <div class="hero-visual fade-in" aria-hidden="true"></div>
+            <div class="hero-visual fade-in" aria-hidden="true">
+              <svg class="axiom" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <radialGradient id="axCore" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="#5b79ff" stop-opacity="0.95" />
+                    <stop offset="100%" stop-color="#2347e6" stop-opacity="0.85" />
+                  </radialGradient>
+                </defs>
+                <g stroke="rgba(21,24,28,0.10)" fill="none" stroke-width="1">
+                  <circle cx="200" cy="200" r="60" />
+                  <circle cx="200" cy="200" r="110" />
+                  <circle cx="200" cy="200" r="165" />
+                </g>
+                <g class="axiom-ring">
+                  <circle cx="200" cy="35" r="6" fill="#3a5bd9" class="axiom-node" />
+                  <circle cx="365" cy="200" r="6" fill="#15876f" class="axiom-node" />
+                  <circle cx="200" cy="365" r="6" fill="#bd6a2c" class="axiom-node" />
+                  <circle cx="35" cy="200" r="6" fill="#6f57d4" class="axiom-node" />
+                </g>
+                <g class="axiom-ring axiom-ring--2">
+                  <circle cx="200" cy="90" r="3.5" fill="rgba(35,71,230,0.5)" />
+                  <circle cx="310" cy="200" r="3.5" fill="rgba(35,71,230,0.5)" />
+                  <circle cx="200" cy="310" r="3.5" fill="rgba(35,71,230,0.5)" />
+                  <circle cx="90" cy="200" r="3.5" fill="rgba(35,71,230,0.5)" />
+                </g>
+                <circle cx="200" cy="200" r="30" fill="url(#axCore)" />
+                <circle cx="200" cy="200" r="30" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1" />
+              </svg>
+            </div>
 
             <div class="hero-trust-grid fade-in" aria-label="Ключевые факторы доверия">
               <article class="hero-trust-item">
@@ -162,8 +193,8 @@
                 снижение издержек, рост стартапов, повышение выручки и возврата на инвестиции.
               </p>
             </div>
-            <div class="cards-grid two">
-              <article class="card fade-in">
+            <div class="cards-grid two" data-stagger>
+              <article class="card card--studio fade-in">
                 <span class="icon-badge" aria-hidden="true">
                   <svg viewBox="0 0 24 24"><path d="M4 8h7v12H4z"/><path d="M13 4h7v16h-7z"/><path d="M4 4h7v2H4z"/></svg>
                 </span>
@@ -175,7 +206,7 @@
                 </p>
                 <a class="card-link" href="studio.html">Открыть направление</a>
               </article>
-              <article class="card fade-in">
+              <article class="card card--consulting fade-in">
                 <span class="icon-badge" aria-hidden="true">
                   <svg viewBox="0 0 24 24"><path d="M6 7h12"/><path d="M6 12h12"/><path d="M6 17h7"/><circle cx="16" cy="17" r="2"/></svg>
                 </span>
@@ -187,7 +218,7 @@
                 </p>
                 <a class="card-link" href="consulting.html">Открыть направление</a>
               </article>
-              <article class="card fade-in">
+              <article class="card card--accelerator fade-in">
                 <span class="icon-badge" aria-hidden="true">
                   <svg viewBox="0 0 24 24"><path d="M4 16c2.5-2.5 4.5-3.5 7-3.5 2.2 0 3.5.7 5 2.2L20 9"/><path d="M16 9h4v4"/><path d="M4 20h16"/></svg>
                 </span>
@@ -198,7 +229,7 @@
                 </p>
                 <a class="card-link" href="accelerator.html">Открыть направление</a>
               </article>
-              <article class="card fade-in">
+              <article class="card card--capital fade-in">
                 <span class="icon-badge" aria-hidden="true">
                   <svg viewBox="0 0 24 24"><path d="M12 3 5 6v5c0 4.5 2.6 7.6 7 10 4.4-2.4 7-5.5 7-10V6l-7-3z"/><path d="M9 12h6"/><path d="M12 9v6"/></svg>
                 </span>
@@ -246,7 +277,7 @@
                   </div>
                 </div>
               </div>
-              <div class="timeline fade-in">
+              <div class="timeline fade-in" data-stagger>
                 <p class="timeline-heading">Процесс</p>
                 <article class="timeline-step">
                   <div class="timeline-step-number">01</div>
@@ -294,44 +325,44 @@
               <h2>Услуги</h2>
               <p>Решаем ключевые задачи бизнеса с помощью технологий.</p>
             </div>
-            <div class="service-ledger fade-in">
-              <article class="service-row">
+            <div class="service-grid fade-in" data-stagger>
+              <article class="service-card">
                 <h3 class="service-row-title"><a href="discovery.html">Discovery</a></h3>
                 <p class="service-row-purpose">Помогаем превратить идею в понятный план продукта.</p>
                 <p class="service-row-copy">Исследуем рынок, конкурентов, пользователей и бизнес-задачу. Формируем гипотезы, рекомендации, архитектурный подход, прототипы интерфейсов и бэклог задач для запуска проекта.</p>
                 <a class="service-row-link" href="discovery.html">Подробнее о Discovery</a>
               </article>
-              <article class="service-row">
+              <article class="service-card">
                 <h3 class="service-row-title"><a href="product-studio.html">Заказная разработка</a></h3>
                 <p class="service-row-purpose">Разрабатываем цифровые продукты — от MVP до масштабируемых платформ.</p>
                 <p class="service-row-copy">Быстро собираем первые версии продукта, тестируем гипотезы, проектируем удобные интерфейсы и создаем надежные решения для роста, автоматизации и развития бизнеса.</p>
                 <a class="service-row-link" href="product-studio.html">Подробнее о заказной разработке</a>
               </article>
-              <article class="service-row">
+              <article class="service-card">
                 <h3 class="service-row-title"><a href="it-consulting.html">IT-консалтинг</a></h3>
                 <p class="service-row-purpose">Помогаем сделать ИТ-процессы прозрачнее, эффективнее и управляемее.</p>
                 <p class="service-row-copy">Анализируем процессы, команду, архитектуру и инструменты. Находим узкие места, точки роста и формируем практичные рекомендации по снижению издержек, повышению скорости разработки и управляемости ИТ.</p>
                 <a class="service-row-link" href="it-consulting.html">Подробнее об IT-консалтинге</a>
               </article>
-              <article class="service-row">
+              <article class="service-card">
                 <h3 class="service-row-title"><a href="ai-automation.html">ИИ-автоматизация процессов</a></h3>
                 <p class="service-row-purpose">Снижаем ручную нагрузку в повторяемых бизнес-процессах с помощью ИИ-инструментов.</p>
                 <p class="service-row-copy">Разбираем процесс, фиксируем метрики “до”, проектируем ИИ-автоматизацию, внедряем решение и оцениваем эффект “после”. Подходит задачам, где важно получить измеримый бизнес-результат.</p>
                 <a class="service-row-link" href="ai-automation.html">Подробнее об ИИ-автоматизации</a>
               </article>
-              <article class="service-row">
+              <article class="service-card">
                 <h3 class="service-row-title"><a href="ai-training.html">Обучение сотрудников работе с ИИ</a></h3>
                 <p class="service-row-purpose">Обучаем команды применять ИИ-инструменты в реальных рабочих задачах.</p>
                 <p class="service-row-copy">Показываем, как использовать ИИ в ежедневных процессах: для анализа, текстов, документов, поиска решений и автоматизации рутины. Помогаем сформировать общий подход, практические навыки и базу для дальнейшего внедрения ИИ внутри подразделений.</p>
                 <a class="service-row-link" href="ai-training.html">Подробнее об ИИ-обучении</a>
               </article>
-              <article class="service-row">
+              <article class="service-card">
                 <h3 class="service-row-title"><a href="startup-tracking.html">Стартап-трекинг</a></h3>
                 <p class="service-row-purpose">Помогаем стартап-командам быстрее двигаться от идеи к устойчивому росту.</p>
                 <p class="service-row-copy">Работаем с продуктовой гипотезой, целевой аудиторией, бизнес-моделью, метриками, продажами и планом развития. Подходит командам, которым нужен внешний взгляд, фокус и регулярное движение к результату.</p>
                 <a class="service-row-link" href="startup-tracking.html">Подробнее о стартап-трекинге</a>
               </article>
-              <article class="service-row">
+              <article class="service-card">
                 <h3 class="service-row-title"><a href="startup-packaging.html">Упаковка для инвесторов</a></h3>
                 <p class="service-row-purpose">Помогаем подготовить проект к переговорам с инвесторами.</p>
                 <p class="service-row-copy">Упаковываем бизнес-модель, финансовую модель, рынок, стратегию роста, риски, презентацию и питч. Подходит проектам, у которых уже есть понятный трек развития и нужно убедительно показать инвестиционную привлекательность.</p>
@@ -351,7 +382,7 @@
                   коммерциализации и акселерации цифровых продуктов.
                 </p>
               </div>
-              <div class="trust-proof-list">
+              <div class="trust-proof-list" data-stagger>
                 <article class="trust-proof-item">
                   <span>01</span>
                   <div>
@@ -401,7 +432,7 @@
                 <div class="case-group-heading">
                   <h3>Разработка цифровых продуктов</h3>
                 </div>
-                <div class="case-list">
+                <div class="case-list" data-stagger>
                   <div class="case-item">
                     <span class="case-item-number">01</span>
                     <div class="case-item-body">
@@ -450,7 +481,7 @@
                 <div class="case-group-heading">
                   <h3>Акселерация и стартапы</h3>
                 </div>
-                <div class="case-list">
+                <div class="case-list" data-stagger>
                   <div class="case-item">
                     <span class="case-item-number">01</span>
                     <div class="case-item-body">
@@ -478,7 +509,7 @@
                 <div class="case-group-heading">
                   <h3>ИИ-автоматизация</h3>
                 </div>
-                <div class="case-list">
+                <div class="case-list" data-stagger>
                   <div class="case-item">
                     <span class="case-item-number">01</span>
                     <div class="case-item-body">
