@@ -4,4 +4,5 @@ Thumbs.db
 *.MD
 texts/
 dist/
+docs/
 __pycache__/

@@ -1,7 +1,7 @@
 {
   "name": "Axionica",
   "short_name": "Axionica",
-  "start_url": "/ru/",
+  "start_url": "/",
   "display": "standalone",
   "background_color": "#f4f7fb",
   "theme_color": "#17345f",

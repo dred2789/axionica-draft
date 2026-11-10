@@ -20,7 +20,7 @@ cleanup() {
 trap cleanup EXIT HUP INT TERM
 tar -xzf "$DEPLOY_RELEASE/website.tar.gz" -C "$DEPLOY_RELEASE" --no-same-owner
 rm "$DEPLOY_RELEASE/website.tar.gz"
-test -s "$DEPLOY_RELEASE/ru/index.html"
+test -s "$DEPLOY_RELEASE/index.html"
 test -s "$DEPLOY_RELEASE/en/index.html"
 test -s "$DEPLOY_RELEASE/404.html"
 find "$DEPLOY_RELEASE" -type d -exec chmod 755 {} +

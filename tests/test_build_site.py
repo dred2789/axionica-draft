@@ -21,9 +21,10 @@ class BuildSiteTest(unittest.TestCase):
         self.root = Path(self.temp.name).resolve()
         self.output = self.root / "dist"
         for name in builder.PUBLIC_ROOT:
-            self.put(name, "https://YOUR-DOMAIN.TLD/ru/" if name != "manifest.webmanifest" else '{}')
-        for language in ("ru", "en"):
-            self.put(language + "/index.html", '<img src="../assets/icons/logo.svg">')
+            self.put(name, "https://YOUR-DOMAIN.TLD/" if name != "manifest.webmanifest" else '{}')
+        self.put('index.html', '<img src="/assets/icons/logo.svg">')
+        for language in ("en",):
+            self.put(language + "/index.html", '<img src="/assets/icons/logo.svg">')
         self.put("assets/icons/logo.svg", '<svg xmlns="http://www.w3.org/2000/svg"/>')
         for name, value in (("ROOT", self.root), ("OUTPUT", self.output)):
             context = patch.object(builder, name, value)
@@ -38,24 +39,34 @@ class BuildSiteTest(unittest.TestCase):
     def mapping(self):
         return json.loads((self.output / builder.MARKER).read_text())["assets"]
 
+    def test_russian_root_sections_and_english_are_published_without_ru(self):
+        self.put('directions/studio/index.html', '<a href="/">RU</a>')
+        self.put('internal-preview/index.html', 'private')
+        builder.build()
+        self.assertTrue((self.output / 'directions/studio/index.html').is_file())
+        self.assertTrue((self.output / 'index.html').is_file())
+        self.assertTrue((self.output / 'en/index.html').is_file())
+        self.assertFalse((self.output / 'ru').exists())
+        self.assertFalse((self.output / 'internal-preview').exists())
+
     def test_directory_indexes_are_discovered_recursively(self):
-        for language in ('ru', 'en'):
+        for language in ('en',):
             self.put(language + '/directions/studio/index.html', '<a href="/' + language + '/">Home</a>')
         builder.build()
-        for language in ('ru', 'en'):
+        for language in ('en',):
             self.assertTrue((self.output / language / 'directions/studio/index.html').is_file())
             self.assertEqual(builder.page_url('/' + language + '/directions/studio/index.html'),
                              '/' + language + '/directions/studio/')
 
     def test_clean_nested_page_urls_and_resources(self):
-        self.put('ru/services/discovery/index.html', '''<link rel="canonical" href="https://YOUR-DOMAIN.TLD/ru/services/discovery/">
-<a href="/en/services/discovery/">EN</a><a href="/ru/directions/studio/?from=service#work">Studio</a>
-<a href="/ru/services/">Services</a><a href="/ru/">Home</a>
+        self.put('services/discovery/index.html', '''<link rel="canonical" href="https://YOUR-DOMAIN.TLD/services/discovery/">
+<a href="/en/services/discovery/">EN</a><a href="/directions/studio/?from=service#work">Studio</a>
+<a href="/services/">Services</a><a href="/">Home</a>
 <img src="/assets/icons/logo.svg"><a href="https://example.com/ru/studio.html">External</a>''')
         builder.build()
-        html = (self.output / 'ru/services/discovery/index.html').read_text()
-        for expected in ('https://axionica.ru/ru/services/discovery/', '/en/services/discovery/',
-                         '/ru/directions/studio/?from=service#work', '/ru/services/', '/ru/',
+        html = (self.output / 'services/discovery/index.html').read_text()
+        for expected in ('https://axionica.ru/services/discovery/', '/en/services/discovery/',
+                         '/directions/studio/?from=service#work', '/services/', '/',
                          '/' + self.mapping()['assets/icons/logo.svg'],
                          'https://example.com/ru/studio.html'):
             self.assertIn('"' + expected + '"', html)
@@ -80,7 +91,7 @@ class BuildSiteTest(unittest.TestCase):
         self.put('assets/css/b.css', '@import "a.css";')
         with self.assertRaisesRegex(SystemExit, 'cycle.*a.css.*b.css.*a.css'):
             builder.build()
-        self.assertTrue((self.output / 'ru/index.html').is_file())
+        self.assertTrue((self.output / 'index.html').is_file())
 
     def test_private_files_and_symlinks_are_not_published(self):
         for name in ('secret.md', 'assets/.hidden.css', 'assets/css/main.css.bak', 'ru/.hidden.html', 'ru/private.md'):
@@ -107,11 +118,11 @@ class BuildSiteTest(unittest.TestCase):
     def test_inline_css_and_opaque_external_data_comments(self):
         self.put('assets/css/main.css', '''/* url(../fonts/not-installed.woff2) */
 x { background: url("https://example.com/assets/missing.svg"); mask:url(data:image/svg+xml,%3Csvg%3E); fill:url(#gradient) }''')
-        self.put('ru/index.html', '''<div style="background:url('../assets/icons/logo.svg')"></div>
-<!-- <img src="../assets/missing.svg"> -->
+        self.put('index.html', '''<div style="background:url('/assets/icons/logo.svg')"></div>
+<!-- <img src="/assets/missing.svg"> -->
 <img src="https://example.com/assets/no.svg"><a href="#thing">anchor</a>''')
         builder.build()
-        html = (self.output / 'ru/index.html').read_text()
+        html = (self.output / 'index.html').read_text()
         self.assertIn("url('/" + self.mapping()['assets/icons/logo.svg'] + "')", html)
         self.assertIn('https://example.com/assets/no.svg', html)
         css = (self.output / self.mapping()['assets/css/main.css']).read_text()
@@ -125,7 +136,7 @@ x { background: url("https://example.com/assets/missing.svg"); mask:url(data:ima
         self.put('assets/css/base.css', 'a{background:url(../images/photo.jpg?v=2#crop)}')
         self.put('assets/css/main.css', '@import "base.css"; b{background:url("../images/sprite.svg#icon")}')
         self.put('assets/js/main.js', 'fetch("../images/sprite.svg"); const image="/assets/images/photo.jpg";')
-        self.put('ru/index.html', '<link href="../assets/css/main.css"><script src="../assets/js/main.js"></script><img srcset="../assets/images/photo.jpg 1x, /assets/images/photo.jpg 2x"><style>x{background:url(../assets/images/photo.jpg)}</style>')
+        self.put('index.html', '<link href="/assets/css/main.css"><script src="/assets/js/main.js"></script><img srcset="/assets/images/photo.jpg 1x, /assets/images/photo.jpg 2x"><style>x{background:url(/assets/images/photo.jpg)}</style>')
         self.put('manifest.webmanifest', '{"icons":[{"src":"/assets/images/photo.jpg"}]}')
         builder.build()
         first = self.mapping()
@@ -140,7 +151,7 @@ x { background: url("https://example.com/assets/missing.svg"); mask:url(data:ima
         self.assertIn('../images/' + Path(first['assets/images/sprite.svg']).name, js)
         self.assertIn('/' + first['assets/images/photo.jpg'], js)
         self.assertIn('/' + first['assets/images/photo.jpg'], (self.output / 'manifest.webmanifest').read_text())
-        html = (self.output / 'ru/index.html').read_text()
+        html = (self.output / 'index.html').read_text()
         self.assertNotIn('photo.jpg', html)
         self.assertIn('#local', (self.output / first['assets/images/sprite.svg']).read_text())
         snapshot = {p.relative_to(self.output): p.read_bytes() for p in self.output.rglob('*') if p.is_file()}
@@ -160,8 +171,8 @@ x { background: url("https://example.com/assets/missing.svg"); mask:url(data:ima
         self.assertTrue((self.output / expected).is_file(), "asset filename must contain its SHA256 prefix")
         self.assertEqual(self.mapping(), {"assets/icons/logo.svg": expected})
         self.assertFalse((self.output / 'assets/icons/logo.svg').exists())
-        self.assertIn('/' + expected, (self.output / 'ru/index.html').read_text())
-        self.assertEqual((self.output / 'sitemap.xml').read_text(), 'https://axionica.ru/ru/')
+        self.assertIn('/' + expected, (self.output / 'index.html').read_text())
+        self.assertEqual((self.output / 'sitemap.xml').read_text(), 'https://axionica.ru/')
         for name, data in before.items():
             self.assertEqual((self.root / name).read_bytes(), data)
 

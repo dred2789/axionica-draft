@@ -12,11 +12,11 @@ ROOT = Path(__file__).resolve().parents[1]
 class NavigationTest(unittest.TestCase):
     def test_only_matching_directory_link_is_active(self):
         source = (ROOT / 'assets/js/main.js').read_text().split('/* ---------- Mobile menu')[0]
-        for current, expected in [('/ru/', '/ru/'),
-                                  ('/ru/directions/', '/ru/directions/'),
-                                  ('/ru/directions/studio/', '/ru/directions/studio/'),
+        for current, expected in [('/', '/'),
+                                  ('/directions/', '/directions/'),
+                                  ('/directions/studio/', '/directions/studio/'),
                                   ('/en/services/discovery/', '/en/services/discovery/')]:
-            links = ['/ru/', '/ru/directions/', '/ru/directions/studio/', '/en/services/discovery/']
+            links = ['/', '/directions/', '/directions/studio/', '/en/services/discovery/']
             setup = '''const links = LINKS.map(href => ({href, active:false,
 classList:{toggle(name,on){this.owner.active=on}},
 getAttribute(){return this.href},setAttribute(){},removeAttribute(){},closest(){return null}}));

@@ -2,215 +2,255 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>https://axionica.ru/ru/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/" />
+    <loc>https://axionica.ru/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://axionica.ru/ru/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://axionica.ru/" />
   </url>
   <url>
     <loc>https://axionica.ru/en/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://axionica.ru/ru/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://axionica.ru/" />
   </url>
   <url>
-    <loc>https://axionica.ru/ru/directions/accelerator/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/directions/accelerator/" />
+    <loc>https://axionica.ru/directions/accelerator/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/directions/accelerator/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://axionica.ru/directions/accelerator/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/directions/accelerator/" />
   </url>
   <url>
     <loc>https://axionica.ru/en/directions/accelerator/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/directions/accelerator/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/directions/accelerator/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://axionica.ru/directions/accelerator/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/directions/accelerator/" />
   </url>
   <url>
-    <loc>https://axionica.ru/ru/services/ai-automation/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/services/ai-automation/" />
+    <loc>https://axionica.ru/services/ai-automation/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/services/ai-automation/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://axionica.ru/services/ai-automation/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/services/ai-automation/" />
   </url>
   <url>
     <loc>https://axionica.ru/en/services/ai-automation/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/services/ai-automation/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/services/ai-automation/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://axionica.ru/services/ai-automation/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/services/ai-automation/" />
   </url>
   <url>
-    <loc>https://axionica.ru/ru/services/ai-training/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/services/ai-training/" />
+    <loc>https://axionica.ru/services/ai-training/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/services/ai-training/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://axionica.ru/services/ai-training/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/services/ai-training/" />
   </url>
   <url>
     <loc>https://axionica.ru/en/services/ai-training/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/services/ai-training/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/services/ai-training/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://axionica.ru/services/ai-training/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/services/ai-training/" />
   </url>
   <url>
-    <loc>https://axionica.ru/ru/directions/capital/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/directions/capital/" />
+    <loc>https://axionica.ru/directions/capital/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/directions/capital/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://axionica.ru/directions/capital/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/directions/capital/" />
   </url>
   <url>
     <loc>https://axionica.ru/en/directions/capital/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/directions/capital/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/directions/capital/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://axionica.ru/directions/capital/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/directions/capital/" />
   </url>
   <url>
-    <loc>https://axionica.ru/ru/cases/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/cases/" />
+    <loc>https://axionica.ru/cases/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/cases/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://axionica.ru/cases/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/cases/" />
   </url>
   <url>
     <loc>https://axionica.ru/en/cases/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/cases/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/cases/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://axionica.ru/cases/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/cases/" />
   </url>
   <url>
-    <loc>https://axionica.ru/ru/directions/consulting/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/directions/consulting/" />
+    <loc>https://axionica.ru/directions/consulting/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/directions/consulting/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://axionica.ru/directions/consulting/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/directions/consulting/" />
   </url>
   <url>
     <loc>https://axionica.ru/en/directions/consulting/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/directions/consulting/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/directions/consulting/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://axionica.ru/directions/consulting/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/directions/consulting/" />
   </url>
   <url>
-    <loc>https://axionica.ru/ru/contacts/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/contacts/" />
+    <loc>https://axionica.ru/contacts/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/contacts/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://axionica.ru/contacts/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/contacts/" />
   </url>
   <url>
     <loc>https://axionica.ru/en/contacts/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/contacts/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/contacts/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://axionica.ru/contacts/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/contacts/" />
   </url>
   <url>
-    <loc>https://axionica.ru/ru/cookies/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/cookies/" />
+    <loc>https://axionica.ru/cookies/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/cookies/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://axionica.ru/cookies/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/cookies/" />
   </url>
   <url>
     <loc>https://axionica.ru/en/cookies/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/cookies/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/cookies/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://axionica.ru/cookies/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/cookies/" />
   </url>
   <url>
-    <loc>https://axionica.ru/ru/directions/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/directions/" />
+    <loc>https://axionica.ru/directions/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/directions/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://axionica.ru/directions/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/directions/" />
   </url>
   <url>
     <loc>https://axionica.ru/en/directions/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/directions/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/directions/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://axionica.ru/directions/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/directions/" />
   </url>
   <url>
-    <loc>https://axionica.ru/ru/services/discovery/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/services/discovery/" />
+    <loc>https://axionica.ru/services/discovery/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/services/discovery/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://axionica.ru/services/discovery/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/services/discovery/" />
   </url>
   <url>
     <loc>https://axionica.ru/en/services/discovery/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/services/discovery/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/services/discovery/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://axionica.ru/services/discovery/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/services/discovery/" />
   </url>
   <url>
-    <loc>https://axionica.ru/ru/insights/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/insights/" />
+    <loc>https://axionica.ru/insights/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/insights/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://axionica.ru/insights/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/insights/" />
   </url>
   <url>
     <loc>https://axionica.ru/en/insights/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/insights/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/insights/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://axionica.ru/insights/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/insights/" />
   </url>
   <url>
-    <loc>https://axionica.ru/ru/services/it-consulting/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/services/it-consulting/" />
+    <loc>https://axionica.ru/services/it-consulting/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/services/it-consulting/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://axionica.ru/services/it-consulting/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/services/it-consulting/" />
   </url>
   <url>
     <loc>https://axionica.ru/en/services/it-consulting/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/services/it-consulting/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/services/it-consulting/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://axionica.ru/services/it-consulting/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/services/it-consulting/" />
   </url>
   <url>
-    <loc>https://axionica.ru/ru/personal-data-consent/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/personal-data-consent/" />
+    <loc>https://axionica.ru/personal-data-consent/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/personal-data-consent/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://axionica.ru/personal-data-consent/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/personal-data-consent/" />
   </url>
   <url>
     <loc>https://axionica.ru/en/personal-data-consent/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/personal-data-consent/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/personal-data-consent/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://axionica.ru/personal-data-consent/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/personal-data-consent/" />
   </url>
   <url>
-    <loc>https://axionica.ru/ru/privacy/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/privacy/" />
+    <loc>https://axionica.ru/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/privacy/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://axionica.ru/privacy/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/privacy/" />
   </url>
   <url>
     <loc>https://axionica.ru/en/privacy/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/privacy/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/privacy/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://axionica.ru/privacy/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/privacy/" />
   </url>
   <url>
-    <loc>https://axionica.ru/ru/services/product-studio/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/services/product-studio/" />
+    <loc>https://axionica.ru/services/product-studio/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/services/product-studio/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://axionica.ru/services/product-studio/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/services/product-studio/" />
   </url>
   <url>
     <loc>https://axionica.ru/en/services/product-studio/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/services/product-studio/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/services/product-studio/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://axionica.ru/services/product-studio/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/services/product-studio/" />
   </url>
   <url>
-    <loc>https://axionica.ru/ru/services/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/services/" />
+    <loc>https://axionica.ru/services/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/services/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://axionica.ru/services/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/services/" />
   </url>
   <url>
     <loc>https://axionica.ru/en/services/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/services/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/services/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://axionica.ru/services/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/services/" />
   </url>
   <url>
-    <loc>https://axionica.ru/ru/services/startup-packaging/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/services/startup-packaging/" />
+    <loc>https://axionica.ru/services/startup-packaging/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/services/startup-packaging/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://axionica.ru/services/startup-packaging/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/services/startup-packaging/" />
   </url>
   <url>
     <loc>https://axionica.ru/en/services/startup-packaging/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/services/startup-packaging/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/services/startup-packaging/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://axionica.ru/services/startup-packaging/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/services/startup-packaging/" />
   </url>
   <url>
-    <loc>https://axionica.ru/ru/services/startup-tracking/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/services/startup-tracking/" />
+    <loc>https://axionica.ru/services/startup-tracking/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/services/startup-tracking/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://axionica.ru/services/startup-tracking/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/services/startup-tracking/" />
   </url>
   <url>
     <loc>https://axionica.ru/en/services/startup-tracking/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/services/startup-tracking/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/services/startup-tracking/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://axionica.ru/services/startup-tracking/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/services/startup-tracking/" />
   </url>
   <url>
-    <loc>https://axionica.ru/ru/directions/studio/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/directions/studio/" />
+    <loc>https://axionica.ru/directions/studio/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/directions/studio/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://axionica.ru/directions/studio/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/directions/studio/" />
   </url>
   <url>
     <loc>https://axionica.ru/en/directions/studio/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/directions/studio/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/directions/studio/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://axionica.ru/directions/studio/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/directions/studio/" />
   </url>
   <url>
-    <loc>https://axionica.ru/ru/team/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/team/" />
+    <loc>https://axionica.ru/team/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/team/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://axionica.ru/team/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/team/" />
   </url>
   <url>
     <loc>https://axionica.ru/en/team/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/ru/team/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://axionica.ru/team/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://axionica.ru/team/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://axionica.ru/en/team/" />
   </url>
 </urlset>

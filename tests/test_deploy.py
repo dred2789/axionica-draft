@@ -19,7 +19,7 @@ class DeployTest(unittest.TestCase):
                 incoming.mkdir()
                 payload = base / 'payload'
                 payload.mkdir(exist_ok=True)
-                for file in ('ru/index.html', 'en/index.html', '404.html'):
+                for file in ('index.html', 'en/index.html', '404.html'):
                     target = payload / file
                     target.parent.mkdir(parents=True, exist_ok=True)
                     target.write_text(name)

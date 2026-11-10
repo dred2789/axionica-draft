@@ -91,6 +91,6 @@ jobs:
 
       - name: Check public HTTPS
         run: |
-          curl --fail --silent --show-error --retry 4 --retry-all-errors --max-time 30 https://axionica.ru/ru/ -o /tmp/axionica-live.html
-          cmp dist/ru/index.html /tmp/axionica-live.html
+          curl --fail --silent --show-error --retry 4 --retry-all-errors --max-time 30 https://axionica.ru/ -o /tmp/axionica-live.html
+          cmp dist/index.html /tmp/axionica-live.html
           curl --fail --silent --show-error --max-time 30 https://axionica.ru/en/ -o /dev/null

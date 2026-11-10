@@ -14,6 +14,8 @@ ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "dist"
 MARKER = ".axionica-build"
 PUBLIC_ROOT = ("index.html", "404.html", "robots.txt", "sitemap.xml", "manifest.webmanifest")
+PAGE_DIRECTORIES = ("directions", "services", "team", "cases", "insights", "contacts",
+                    "privacy", "cookies", "personal-data-consent", "en")
 ASSET_EXTENSIONS = {".css", ".js", ".svg", ".jpg", ".jpeg", ".png", ".webp", ".avif", ".gif", ".ico", ".woff", ".woff2"}
 
 def page_url(path):
@@ -67,11 +69,11 @@ def rewrite_text(text, owner, resolve):
 
 def build():
     files = [ROOT / name for name in PUBLIC_ROOT]
-    for language in ("ru", "en"):
-        pages = sorted(path for path in (ROOT / language).rglob("index.html")
+    if not (ROOT / 'en/index.html').is_file():
+        raise SystemExit('Missing language homepage: en')
+    for directory in PAGE_DIRECTORIES:
+        pages = sorted(path for path in (ROOT / directory).rglob("index.html")
                        if not any(part.startswith('.') for part in path.relative_to(ROOT).parts))
-        if not (ROOT / language / "index.html").is_file():
-            raise SystemExit("Missing language homepage: " + language)
         files.extend(pages)
     files.extend(sorted(path for path in (ROOT / "assets").rglob("*")
                         if path.is_file() and path.suffix.lower() in ASSET_EXTENSIONS

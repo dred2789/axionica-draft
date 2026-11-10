@@ -54,7 +54,7 @@ class NginxSmokeTest(unittest.TestCase):
         cls.base = "http://" + port.strip()
         for attempt in range(50):
             try:
-                with urlopen(cls.base + "/ru/", timeout=2):
+                with urlopen(cls.base + "/", timeout=2):
                     break
             except (URLError, ConnectionError):
                 if attempt == 49:
@@ -73,7 +73,7 @@ class NginxSmokeTest(unittest.TestCase):
             if not file.is_file():
                 continue
             path = "/" + file.relative_to(ROOT / "dist").as_posix()
-            if path in ("/index.html", "/.axionica-build"):
+            if path in ("/.axionica-build",):
                 continue
             path = builder.page_url(path)
             with self.subTest(path=path), self.fetch(path) as response:
@@ -82,7 +82,7 @@ class NginxSmokeTest(unittest.TestCase):
 
     def test_all_page_links_metadata_and_assets_resolve(self):
         seen = set()
-        for file in sorted((ROOT / 'dist').glob('*/**/index.html')):
+        for file in sorted((ROOT / 'dist').rglob('index.html')):
             page = builder.page_url('/' + file.relative_to(ROOT / 'dist').as_posix())
             parser = References()
             parser.feed(file.read_text())
@@ -97,7 +97,7 @@ class NginxSmokeTest(unittest.TestCase):
                         self.assertEqual(response.status, 200)
 
     def test_clean_pages_head_mime_queries_and_old_urls(self):
-        for file in sorted((ROOT / 'dist').glob('*/**/index.html')):
+        for file in sorted((ROOT / 'dist').rglob('index.html')):
             source = '/' + file.relative_to(ROOT / 'dist').as_posix()
             clean = builder.page_url(source)
             with self.subTest(clean=clean), self.fetch(clean + '?source=test') as response:
@@ -108,13 +108,13 @@ class NginxSmokeTest(unittest.TestCase):
                 self.assertEqual(response.status, 200)
                 self.assertIn('text/html', response.headers['Content-Type'])
                 self.assertEqual(response.read(), b'')
-            parts = clean.strip('/').split('/')
-            old = '/' + parts[0] + '/' + (parts[-1] if len(parts) > 1 else 'index') + '.html'
-            for alias in set((old, source, clean.rstrip('/') + '.html')):
+            relative = clean.removeprefix('/en/') if clean.startswith('/en/') else clean.lstrip('/')
+            old_ru = '/ru/' + relative
+            for alias in set((old_ru, source, (clean.rstrip('/') or '/index') + '.html')):
                 with self.subTest(alias=alias), self.fetch(alias) as response:
                     self.assertEqual(response.status, 404)
                     self.assertEqual(response.geturl(), self.base + alias)
-            with self.fetch(clean.rstrip('/') + '?source=slash') as response:
+            with self.fetch((clean.rstrip('/') or '/') + '?source=slash') as response:
                 self.assertEqual(response.status, 200)
                 self.assertEqual(response.geturl(), self.base + clean + '?source=slash')
                 self.assertEqual(response.read(), file.read_bytes())
@@ -124,7 +124,8 @@ class NginxSmokeTest(unittest.TestCase):
                      'x': 'http://www.w3.org/1999/xhtml'}
         tree = ElementTree.parse(ROOT / 'dist/sitemap.xml')
         locations = [entry.text for entry in tree.findall('s:url/s:loc', namespace)]
-        pages = sorted((ROOT / 'dist').glob('*/**/index.html'))
+        pages = sorted((ROOT / 'dist').rglob('index.html'))
+        self.assertEqual(len(pages), 42)
         expected = {'https://axionica.ru' + builder.page_url('/' + page.relative_to(ROOT / 'dist').as_posix())
                     for page in pages}
         self.assertEqual(len(locations), len(expected))
@@ -133,21 +134,25 @@ class NginxSmokeTest(unittest.TestCase):
             source = '/' + page.relative_to(ROOT / 'dist').as_posix()
             canonical = 'https://axionica.ru' + builder.page_url(source)
             self.assertIn('rel="canonical" href="' + canonical + '"', page.read_text())
-            for language in ('ru', 'en'):
-                alternate = 'https://axionica.ru' + builder.page_url('/' + language + '/' + page.relative_to(ROOT / 'dist').as_posix().split('/', 1)[1])
+            relative = source.removeprefix('/en/') if source.startswith('/en/') else source.lstrip('/')
+            for language in ('ru', 'en', 'x-default'):
+                alternate = 'https://axionica.ru' + builder.page_url(('/en/' if language == 'en' else '/') + relative)
                 self.assertIn('hreflang="' + language + '" href="' + alternate + '"', page.read_text())
         for alternate in tree.findall('s:url/x:link', namespace):
             self.assertIn(alternate.attrib['href'], expected)
 
-    def test_language_indexes_and_root_redirect(self):
-        for path, target in [("/", "/ru/"), ("/index.html", "/ru/"),
-                             ("/ru", "/ru/"), ("/en", "/en/")]:
-            with self.subTest(path=path), self.fetch(path + "?source=test") as response:
-                self.assertEqual(response.geturl(), self.base + target + "?source=test")
-                self.assertEqual(response.read(), (ROOT / "dist" / target.strip("/") / "index.html").read_bytes())
-        for language in ("ru", "en"):
-            with self.fetch("/" + language + "/") as response:
-                self.assertEqual(response.read(), (ROOT / 'dist' / language / "index.html").read_bytes())
+    def test_language_indexes_and_old_ru_rejection(self):
+        for target, file in [('/', 'index.html'), ('/en/', 'en/index.html')]:
+            with self.fetch(target) as response:
+                self.assertEqual(response.status, 200)
+                self.assertEqual(response.geturl(), self.base + target)
+                self.assertEqual(response.read(), (ROOT / 'dist' / file).read_bytes())
+        with self.fetch('/en?source=test') as response:
+            self.assertEqual(response.geturl(), self.base + '/en/?source=test')
+        for path in ('/ru', '/ru/', '/ru/directions/', '/ru/services/discovery/', '/ru/index.html', '/index.html'):
+            with self.subTest(path=path), self.fetch(path) as response:
+                self.assertEqual(response.status, 404)
+                self.assertEqual(response.geturl(), self.base + path)
 
     def asset_url(self, source):
         return '/' + self.assets[source]
@@ -164,7 +169,7 @@ class NginxSmokeTest(unittest.TestCase):
                 self.assertEqual(response.status, 404)
 
     def test_head_mime_cache_and_security(self):
-        for path, mime in [("/ru/", "text/html"), ("/assets/css/main.css", "text/css"),
+        for path, mime in [("/", "text/html"), ("/assets/css/main.css", "text/css"),
                            ("/assets/js/main.js", "application/javascript"),
                            ("/assets/icons/logo.svg", "image/svg+xml"),
                            ("/manifest.webmanifest", "application/manifest+json"),
@@ -185,9 +190,9 @@ class NginxSmokeTest(unittest.TestCase):
         with self.fetch(self.asset_url('assets/css/main.css'), headers={"Accept-Encoding": "gzip"}) as response:
             self.assertEqual(response.headers["Content-Encoding"], "gzip")
             self.assertEqual(gzip.decompress(response.read()), (ROOT / 'dist' / self.assets['assets/css/main.css']).read_bytes())
-        with self.fetch("/ru/") as response:
+        with self.fetch("/") as response:
             etag = response.headers["ETag"]
-        with self.fetch("/ru/", headers={"If-None-Match": etag}) as response:
+        with self.fetch("/", headers={"If-None-Match": etag}) as response:
             self.assertEqual(response.status, 304)
 
     def test_missing_and_private_paths_return_authored_404(self):
@@ -201,7 +206,8 @@ class NginxSmokeTest(unittest.TestCase):
 
     def test_publication_contains_only_public_files(self):
         files = {p.relative_to(ROOT / "dist").as_posix() for p in (ROOT / "dist").rglob("*") if p.is_file()}
-        self.assertIn("ru/index.html", files)
+        self.assertIn("index.html", files)
+        self.assertFalse(any(p.startswith('ru/') for p in files))
         self.assertIn("en/index.html", files)
         self.assertNotIn("assets/css/main.css.bak", files)
         self.assertFalse(any(p.startswith(("deploy/", "scripts/", "tests/", ".git/")) or p.endswith(".md") for p in files))
