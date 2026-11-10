@@ -1,5 +1,7 @@
 """Real nginx integration checks. Requires Docker and Python 3 stdlib only."""
 import gzip
+import hashlib
+import json
 import subprocess
 
 import time
@@ -17,9 +19,15 @@ class NginxSmokeTest(unittest.TestCase):
         assert (ROOT / "deploy/nginx.conf").is_file(), "nginx configuration is missing"
         assert (ROOT / "scripts/build_site.py").is_file(), "publication builder is missing"
         subprocess.run(["python3", str(ROOT / "scripts/build_site.py")], check=True)
+        cls.assets = json.loads((ROOT / 'dist/.axionica-build').read_text())["assets"]
+        subprocess.run([
+            'docker', 'run', '--rm',
+            '-v', str(ROOT / 'deploy/nginx.conf') + ':/etc/nginx/conf.d/default.conf:ro',
+            'nginx:stable-alpine', 'nginx', '-t',
+        ], check=True)
         cls.container = subprocess.check_output([
             "docker", "run", "--rm", "-d", "-p", "127.0.0.1::80",
-            "-v", str(ROOT / "dist") + ":/var/www/axionica:ro",
+            "-v", str(ROOT / "dist") + ":/var/www/axionica/current:ro",
             "-v", str(ROOT / "deploy/nginx.conf") + ":/etc/nginx/conf.d/default.conf:ro",
             "nginx:stable-alpine",
         ], text=True).strip()
@@ -62,7 +70,21 @@ class NginxSmokeTest(unittest.TestCase):
                 self.assertEqual(response.read(), (ROOT / "dist" / target.strip("/") / "index.html").read_bytes())
         for language in ("ru", "en"):
             with self.fetch("/" + language + "/") as response:
-                self.assertEqual(response.read(), (ROOT / language / "index.html").read_bytes())
+                self.assertEqual(response.read(), (ROOT / 'dist' / language / "index.html").read_bytes())
+
+    def asset_url(self, source):
+        return '/' + self.assets[source]
+
+    def test_hashed_assets_are_immutable_and_match_their_hashes(self):
+        for source, target in self.assets.items():
+            with self.subTest(source=source), self.fetch('/' + target + '?cache=test') as response:
+                self.assertEqual(response.status, 200)
+                content = response.read()
+                self.assertEqual(content, (ROOT / 'dist' / target).read_bytes())
+                self.assertEqual(Path(target).stem.rsplit('.', 1)[1], hashlib.sha256(content).hexdigest()[:16])
+                self.assertEqual(response.headers['Cache-Control'], 'public, max-age=31536000, immutable')
+            with self.fetch('/' + source) as response:
+                self.assertEqual(response.status, 404)
 
     def test_head_mime_cache_and_security(self):
         for path, mime in [("/ru/", "text/html"), ("/assets/css/main.css", "text/css"),
@@ -70,6 +92,8 @@ class NginxSmokeTest(unittest.TestCase):
                            ("/assets/icons/logo.svg", "image/svg+xml"),
                            ("/manifest.webmanifest", "application/manifest+json"),
                            ("/sitemap.xml", "text/xml"), ("/robots.txt", "text/plain")]:
+            if path.startswith('/assets/'):
+                path = self.asset_url(path.lstrip('/'))
             with self.subTest(path=path), self.fetch(path, method="HEAD") as response:
                 self.assertEqual(response.status, 200)
                 self.assertEqual(response.read(), b"")
@@ -77,13 +101,13 @@ class NginxSmokeTest(unittest.TestCase):
                 self.assertIsNotNone(response.headers["ETag"])
                 self.assertEqual(response.headers["X-Content-Type-Options"], "nosniff")
                 self.assertEqual(response.headers["X-Frame-Options"], "SAMEORIGIN")
-                self.assertIn("max-age=604800" if path.startswith("/assets/") else "no-cache",
+                self.assertIn("max-age=31536000, immutable" if path.startswith("/assets/") else "no-cache",
                               response.headers["Cache-Control"])
 
     def test_gzip_and_conditional_request(self):
-        with self.fetch("/assets/css/main.css", headers={"Accept-Encoding": "gzip"}) as response:
+        with self.fetch(self.asset_url('assets/css/main.css'), headers={"Accept-Encoding": "gzip"}) as response:
             self.assertEqual(response.headers["Content-Encoding"], "gzip")
-            self.assertEqual(gzip.decompress(response.read()), (ROOT / "assets/css/main.css").read_bytes())
+            self.assertEqual(gzip.decompress(response.read()), (ROOT / 'dist' / self.assets['assets/css/main.css']).read_bytes())
         with self.fetch("/ru/") as response:
             etag = response.headers["ETag"]
         with self.fetch("/ru/", headers={"If-None-Match": etag}) as response:
